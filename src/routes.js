@@ -4,7 +4,7 @@ import Layout from './HOC/Layout';
 const Routes = (props) => {
   return (
     <Layout>
-      children 
+      {props.children}
     </Layout>
   )
 }
