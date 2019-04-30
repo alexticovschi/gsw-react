@@ -25,3 +25,53 @@ a {
 .img_cover {
     background-size: cover !important;
 }
+
+.dark_blue {
+    background: #26282A;
+    /* background: #006BB6; */
+}
+
+
+/*=============================
+            FEATURED
+===============================*/
+
+.featured_wrapper {
+    position: relative;
+    height: 90vh;
+    overflow: hidden;
+    margin: 0 auto;
+    background-color: #fff;
+    background: radial-gradient(circle, var(--color1) 40%, var(--color2), var(--color3));
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+
+
+
+/*=============================
+             FOOTER
+===============================*/
+
+footer {
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+    padding: 30px 0px;
+    height: 120px;
+}
+
+footer .img_cover{
+   margin:0 auto;
+}
+
+footer .footer_discl {
+    margin: 10px 0px;
+}
