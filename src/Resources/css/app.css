@@ -28,7 +28,6 @@ a {
 
 .dark_blue {
     background: #26282A;
-    /* background: #006BB6; */
 }
 
 
@@ -42,13 +41,32 @@ a {
     overflow: hidden;
     margin: 0 auto;
     background-color: #fff;
-    background: radial-gradient(circle, var(--color1) 40%, var(--color2), var(--color3));
+    background: radial-gradient(circle, var(--color1) 30%, var(--color2), var(--color3));
 
 
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
+.featured_stripes {
+    position: absolute;
+    width: 80vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.featured_stripes .stripe {
+    width: 24vw;
+    height: 100vh;
+    position: relative;
+    transform: skew(-0.00turn, 0deg) !important;
+    margin-right: .5rem;
+}
+
 
 
 
