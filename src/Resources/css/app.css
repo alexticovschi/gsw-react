@@ -1,8 +1,9 @@
 body {
     margin:0;
     padding:0;
-    font-family: Oxygen, sans-serif;
+    font-family: 'Roboto', sans-serif;
 
+    /* font-family: Oxygen, sans-serif; */
 }
 
 :root {
@@ -37,7 +38,7 @@ a {
 
 .featured_wrapper {
     position: relative;
-    height: 90vh;
+    height: 95vh;
     overflow: hidden;
     margin: 0 auto;
     background-color: #fff;
@@ -60,16 +61,56 @@ a {
 }
 
 .featured_stripes .stripe {
-    width: 24vw;
+    width: 25vw;
     height: 100vh;
     position: relative;
     transform: skew(-0.00turn, 0deg) !important;
     margin-right: .5rem;
 }
 
+.featured_number {
+    font-size: 210px;
+    color: #ffffff;
+    transform: translate(260px,170px);
+    position: absolute;
+    text-shadow: 2px 3px 8px #7a7777;
+}
 
+.featured_player {
+    width: 50vw;
+    top: -60px;
+    height: 710px;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+    position: absolute;
+    margin: 0 auto;
+}
+.featured_first {
+    position: absolute;
+    background: #0e1731;
+    color: #ffffff;
+    font-size: 82px;
+    text-transform: uppercase;
+    padding: 0px 20px;
+    margin-top: -300px;
+    margin-left: -900px;
+}
 
+.featured_second {
+    position: absolute;
+    background: #0e1731;
+    color: #ffffff;
+    font-size: 82px;
+    text-transform: uppercase;
+    padding: 0px 20px;
+    margin-top: -300px;
+    margin-left: -900px;
+}
 
+.featured_text {
+    position: relative;
+    font-family: 'Righteous', cursive;
+}
 
 
 
