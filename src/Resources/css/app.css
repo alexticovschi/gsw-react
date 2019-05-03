@@ -10,12 +10,8 @@ body {
     --color1: rgb(115, 187, 221);
     --color2: #5EACC2;
     --color3: rgb(5, 101, 146);
-    --color4: #4B4452;
-    --color5: #46404f;
-    --color6: #746f7f;
 
     --gsw-color: #EABF4F;
-    --utc-color: #072242;
 }
 
 a {
@@ -111,6 +107,122 @@ a {
     position: relative;
     font-family: 'Righteous', cursive;
 }
+
+
+
+/*=============================
+          HOME  GAMES 
+===============================*/
+.home_games {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    grid-column-gap: 78px;
+    grid-row-gap: 100px;
+
+    padding: 150px 0px;
+}
+
+.home_games_wrapper {
+    background: #006BB6;
+    background: radial-gradient(circle, var(--color1) 40%, var(--color2), var(--color3));
+
+    border-top: 1px solid rgb(129, 192, 236);
+    z-index: 10000;
+    padding: 0 20px;
+}  
+
+.home_games_wrapper .container {
+    max-width: 1470px;
+    margin: 0 auto;
+}
+
+/*=============================
+            GAMES BLOCK
+===============================*/
+/* .games_wrapper {
+    min-height: 95.2vh;
+} */
+
+.game_block {
+    padding: 6px 0px;
+}
+
+.scoreboard {
+    height: 145px;
+    border-radius: 20px;
+    background: linear-gradient(-48deg, rgb(201, 229, 248) 46%, rgb(182, 222, 250) 49%);
+    box-shadow: 2px 3px 5px 0px rgba(0, 0, 0, 0.25);
+}
+
+.date {
+    display: block;
+    position: absolute;
+    margin-top: -27px;
+    margin-left: 18px;
+    font-size: 14px;
+    background-color: rgb(233, 213, 162);
+    background-color: #fff;
+    padding: 5px 6px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+  
+.team {
+    width: 100%;
+    height: 50%;
+    font-size: 21px;
+    color: white;
+    color: rgb(5, 5, 5);
+    
+    display: grid;
+    grid-template-columns: 1fr 1.3fr 1fr;
+    align-content: center;
+    align-items: center;
+}
+
+.team .name {
+    letter-spacing: 2px;
+    font-size: 19px;
+}
+
+.team .logo {
+    width: 65px;
+    margin: 25px;
+}
+.team .score {
+    flex-shrink: 0;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    letter-spacing: 2px;
+}
+  
+.divider {
+    border-top: 1px solid #98c3d4;
+}
+  
+.win.score {
+    color: #EABF4F;
+    font-weight: 900;
+} 
+
+.lose.score {
+    color: rgb(192, 0, 0);
+    font-weight: 900;
+}
+
+.win .record {
+    color: white;
+    border-bottom: 2px solid #EABF4F;
+}
+  
+.win .score {
+    color: #072242;
+}
+
+
+
 
 
 

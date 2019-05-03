@@ -16,7 +16,9 @@ const config = {
 firebase.initializeApp(config);
 
 const firebaseDB = firebase.database();
+const firebaseGames = firebaseDB.ref('games');
 
-firebaseDB.ref('games').once('value').then((data)=>{
-    console.log(data.val())
-})
+export {
+    firebase,
+    firebaseGames
+}
