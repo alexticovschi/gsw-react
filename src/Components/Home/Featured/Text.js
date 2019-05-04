@@ -2,7 +2,9 @@ import React from 'react';
 import { easePolyOut } from 'd3-ease';
 import Animate from 'react-move/Animate';
 
-import FeaturedPlayer from '../../../Resources/images/stephen_curry3.png';
+import Kevin_Durant from '../../../Resources/images/kevin_durant.png';
+import Stephen_Curry from '../../../Resources/images/stephen_curry5.png';
+import Klay_Thompson from '../../../Resources/images/klay_thompson.png';
 
 const Text = () => {
     const animateNumber = () => (
@@ -30,7 +32,7 @@ const Text = () => {
                             transform: `translate(-320px, -170px) rotateY(${rotate}deg)`
                         }}
                     >
-                        30
+                        
                     </div>
                 )
             }}
@@ -61,7 +63,8 @@ const Text = () => {
                     <div className="featured_first"
                         style={{
                             opacity,
-                            transform: `translate(${x}px, ${y}px)`
+                            transform: `translate(${x}px, ${y}px)`,
+                            borderRadius: '10px'
                         }}
                     >
                         Golden
@@ -96,7 +99,8 @@ const Text = () => {
                     <div className="featured_second"
                         style={{
                             opacity,
-                            transform: `translate(${x}px, ${y}px)`
+                            transform: `translate(${x}px, ${y}px)`,
+                            borderRadius: '10px'
                         }}
                     >
                         State Warriors
@@ -110,11 +114,13 @@ const Text = () => {
         <Animate
             show={true}
             start={{
-                opacity: 0
+                opacity: 0,
+                rotate: [0]
             }}
 
             enter={{
                 opacity: [1],
+                rotate: [360],
                 timing: {
                     delay: 800,
                     duration: 1000,
@@ -122,17 +128,48 @@ const Text = () => {
                 }
             }}
         >
-            {({ opacity }) => {
+            {({ opacity, rotate }) => {
                 return (
-                    <div className="featured_player"
-                        style={{
-                            opacity,
-                            background: `url(${FeaturedPlayer})`,
-                            transform: `translate(-100px, -210px)`
-                        }}
-                    >
-                        
+                    <div>   
+                        <div className="featured_player"
+                            style={{
+                                opacity,
+                                background: `url(${Kevin_Durant})`,
+                                transform: `translate(-740px, -310px)`
+                            }}
+                        >
+            
+                        </div>
+
+                        <div className="featured_player"
+                            style={{
+                                opacity,
+                                background: `url(${Stephen_Curry})`,
+                                transform: `translate(-230px, -390px)`
+                            }}
+                        >
+            
+                        </div>
+
+                        <div className="featured_player"
+                            style={{
+                                opacity,
+                                background: `url(${Klay_Thompson})`,
+                                transform: `translate(270px, -340px)`
+                            }}
+                        >
+            
+                        </div>
                     </div>
+                    // <div className="featured_player"
+                    //     style={{
+                    //         opacity,
+                    //         background: `url(${FeaturedPlayer})`,
+                    //         transform: `translate(-100px, -210px)`
+                    //     }}
+                    // >
+        
+                    // </div>
                 )
             }}
         </Animate>
@@ -141,7 +178,7 @@ const Text = () => {
     return (
         <div className="featured_text">
             {animatePlayer()}
-            {animateNumber()}
+            {/* {animateNumber()} */}
             {animateFirst()}
             {animateSecond()}
         </div>
