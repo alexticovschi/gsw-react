@@ -408,14 +408,6 @@ button:hover {
     color: #01285e;
 }
 
-.promotion_wrapper .enroll_discl {
-    font-weight: 300;
-    font-size: 12px;
-    width: 271px;
-    margin: 0 auto;
-    padding: 10px 0px;
-}
-
 .promotion_wrapper .enroll_input {
     width: 330px;
     margin: 0 auto;
@@ -494,6 +486,37 @@ button:hover {
 }
 
 
+
+/*=============================
+            LOGIN
+===============================*/
+
+.login_wrapper {
+    padding: 20px;
+    margin-top: 10px;
+    min-height: 75.7vh;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login_wrapper form {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.login_wrapper form button {
+    width: 100%;
+    padding: 10px;
+}
+
+.login_wrapper h2 {
+    font-family: 'Righteous', cursive;
+    color: #006BB6;
+    font-size: 50px;
+}
 
 
 

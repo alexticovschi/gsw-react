@@ -40,8 +40,8 @@ class Header extends Component {
                     </Link>
                     {
                     !this.props.user ? (
-                        <Link to='/sign_in'>
-                        <Button color='inherit'>Sign In</Button>
+                        <Link to='/login'>
+                        <Button color='inherit'>Login</Button>
                         </Link>
                     ) : 
                     (
