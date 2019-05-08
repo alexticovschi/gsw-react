@@ -520,6 +520,39 @@ button:hover {
 
 
 
+/*=============================
+         ADMIN
+===============================*/
+
+.admin_container {
+    margin-top: 88px;
+    display:flex;
+}
+
+.admin_container .admin_left_nav {
+    min-height: 100vh;
+    margin-top: -8px;
+    background: #282828;
+    border-right: 2px solid #95b2db;
+}
+
+.admin_container  .admin_right {
+    flex-grow: 1;
+}
+.admin_container  .admin_progress {
+    text-align: center;
+    margin: 50px 0px;
+}
+
+.admin_container .user_dashboard {
+    font-size: 60px;
+    font-family: 'Righteous', cursive;
+    color: var(--gsw-color);
+    text-align: center;
+    margin-top: 200px;  
+}
+
+
 
 
 /*=============================
