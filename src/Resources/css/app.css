@@ -74,14 +74,19 @@ button:hover {
     font-weight: 600;
     margin: 10px 0px;
 }
-
+  
 .label_inputs {
-    font-size: 17px;
-    margin: 10px 0px;
+    width: 100px;
+    text-align: center;
+
+    font-size: 15px;
+    margin-top: 12px;
+    margin-bottom: 5px;
     font-weight: 300;
-    background: #FDB927;
-    padding: 10px;
+    background: rgb(253, 210, 115);
+    padding: 10px 20px;
     display: inline-block;
+    border-radius: 4px;
 }
 
 
@@ -533,7 +538,6 @@ button:hover {
     min-height: 100vh;
     margin-top: -8px;
     background: #282828;
-    border-right: 2px solid #95b2db;
 }
 
 .admin_container  .admin_right {
@@ -552,6 +556,61 @@ button:hover {
     margin-top: 200px;  
 }
 
+.admin_container .matches_tag_red {
+    font-weight: 700;
+    color: #F44336;
+}
+
+.admin_container .matches_tag_green {
+    font-weight: 700;
+    color: #4CAF50;
+}
+
+.admin_container h2 {
+    text-align: center;
+    padding: 10px 0px;
+    border-bottom: 1px solid #dbdbdb;
+    color: rgb(4, 82, 138);
+    font-size: 24px;
+}
+
+.editgame_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ 
+.select_team_layout .wrapper{
+    display: flex;
+    width: 48vw !important;
+}
+
+.select_team_layout .wrapper .left {
+    flex-grow: 1;
+}
+
+.select_team_layout input {
+}
+
+.select_team_layout input[name=result_local_input],
+.select_team_layout input[name=result_away_input] {
+    width: 60px;
+    text-align: center;
+    background: #063d68;
+    color: #ffffff;
+}
+
+.admin_submit button {
+    font-size: 16px;
+    padding: 12px;
+    background: #063d68;
+    width: 100%;
+    transition: all .4s;
+}
+
+.admin_submit button:hover {
+    background: #2672ac;
+}
 
 
 
