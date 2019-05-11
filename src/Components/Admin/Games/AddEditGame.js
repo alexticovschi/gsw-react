@@ -260,7 +260,7 @@ class AddEditGame extends Component {
                     }).catch(e => {
                         this.setState({ formError: true })
                     })
-            } else { // add d=game
+            } else { // add game
                 firebaseGames.push(dataToSubmit).then(() => {
                     this.props.history.push('/admin_games');
                 }).catch(e => {
