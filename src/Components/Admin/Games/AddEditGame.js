@@ -117,7 +117,6 @@ class AddEditGame extends Component {
                     options: [
                         { key: 'W', value: 'Win' },
                         { key: 'L', value: 'Lose' },
-                        { key: 'D', value: 'Draw' },
                         { key: 'n/a', value: 'n/a' }
                     ]
                 },

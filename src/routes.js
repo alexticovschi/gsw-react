@@ -11,6 +11,8 @@ import Login from './Components/Login';
 import Dashboard from './Components/Admin/Dashboard';
 import AdminGames from './Components/Admin/Games';
 import AddEditGame from './Components/Admin/Games/AddEditGame';
+import AdminPlayers from './Components/Admin/Players';
+import AddEditPlayer from './Components/Admin/Players/AddEditPlayer';
 
 const Routes = (props) => {
   return (
@@ -20,6 +22,8 @@ const Routes = (props) => {
         <PrivateRoute {...props} exact path="/admin_games" component={AdminGames}/>
         <PrivateRoute {...props} exact path="/admin_games/edit_game/:id" component={AddEditGame}/>
         <PrivateRoute {...props} exact path="/admin_games/add_game" component={AddEditGame}/>
+        <PrivateRoute {...props} exact path="/admin_players" component={AdminPlayers}/>
+
         <PublicRoute {...props} restricted={true} exact path="/login" component={Login}/>
         <PublicRoute {...props} restricted={false} exact path="/" component={Home}/>
       </Switch> 
