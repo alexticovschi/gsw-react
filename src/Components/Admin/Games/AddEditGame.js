@@ -4,6 +4,9 @@ import AdminLayout from '../../../HOC/AdminLayout';
 import FormField from '../../UI/FormFields';
 import { validate } from '../../../miscellaneous';
 
+import { firebaseTeams, firebaseDB, firebaseGames } from '../../../firebase';
+import { firebaseLooper } from '../../../miscellaneous';
+
 class AddEditGame extends Component {
     state = {
         gameId: '',
@@ -147,8 +150,131 @@ class AddEditGame extends Component {
         }
     }
 
+    updateFields(match, teamOptions, teams, type, gameId) {
+        const newFormData = {
+            ...this.state.formData
+        }
+
+        for(let key in newFormData) {
+            if(match) {
+                newFormData[key].value = match[key];
+                newFormData[key].valid = true;
+            }
+            if(key === 'local' || key === 'away') {
+                newFormData[key].config.options = teamOptions;
+            }
+
+            this.setState({ 
+                gameId,
+                formType: type,
+                formData: newFormData,
+                teams 
+            })
+        }
+    }
+
+    componentDidMount() {
+        const gameId = this.props.match.params.id;
+        const getTeams = (game, type) => {
+            firebaseTeams
+                .once('value')
+                .then(data => {
+                    const teams = firebaseLooper(data);
+                    const teamOptions = [];
+                
+                    data.forEach(team => {
+                        teamOptions.push({
+                            key: team.val().shortName,
+                            value: team.val().name
+                        })
+                    });
+
+                   this.updateFields(game, teamOptions, teams, type, gameId);
+                })
+        }
+
+        if(!gameId) {
+            getTeams(false, 'Add Game');
+        } else {
+            firebaseDB.ref(`games/${gameId}`)
+                .once('value')
+                .then(data => {
+                    const game = data.val();
+                    
+                    getTeams(game, 'Edit Game');
+                })
+        }
+    }
+
+    updateForm(element) {
+        const newFormData = { ...this.state.formData };
+        const newElement = { ...newFormData[element.id] };
+
+        newElement.value = element.event.target.value;
+
+        let validData = validate(newElement);
+        newElement.valid = validData[0];
+        newElement.validationMessage = validData[1];
+
+        newFormData[element.id] = newElement;
+        
+        this.setState({
+            formError: false,
+            formData: newFormData
+        })
+    }
+
+    successForm(message) {
+        this.setState({
+            formSuccess: message
+        });
+
+        setTimeout(() => this.setState({ formSuccess: '' }), 2000);
+    }
+
+    submitForm(event) {
+        event.preventDefault();
+
+        let dataToSubmit = {};
+        let formIsValid = true;
+
+        for (let key in this.state.formData) {
+            dataToSubmit[key] = this.state.formData[key].value;
+            formIsValid = this.state.formData[key].valid && formIsValid;
+        }
+
+        this.state.teams.forEach(team => {
+            if(team.shortName === dataToSubmit.local) {
+                dataToSubmit['localThmb'] = team.thmb;
+            }
+            if(team.shortName === dataToSubmit.away) {
+                dataToSubmit['awayThmb'] = team.thmb;
+            }
+        })
+
+        if (formIsValid) {
+            if(this.state.formType === 'Edit Game') { // edit game
+                firebaseDB.ref(`games/${this.state.gameId}`)
+                    .update(dataToSubmit).then(() => {
+                        this.successForm('Update Completed')
+                    }).catch(e => {
+                        this.setState({ formError: true })
+                    })
+            } else { // add d=game
+                firebaseGames.push(dataToSubmit).then(() => {
+                    this.props.history.push('/admin_games');
+                }).catch(e => {
+                    this.setState({ formError: true })
+                })
+            }
+        } else {
+            this.setState({ formError: true })
+        }
+    }
+
 
     render() {
+        console.log(this.state)
         return (
             <AdminLayout>
                 <h2>{this.state.formType}</h2>
