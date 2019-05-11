@@ -39,12 +39,18 @@ class Header extends Component {
                         <Button color='inherit'>Games</Button>
                     </Link>
                     
-                    <Link to='/login'>
-                        <Button color='inherit'>Login</Button>
-                    </Link>
-                    <Link to='/dashboard'>
-                        <Button color='inherit'>Dashboard</Button>
-                    </Link>
+                    {
+                        !this.props.user ? (
+                            <Link to='/login'>
+                                <Button color='inherit'>Login</Button>
+                            </Link>
+                        ) : 
+                        (
+                            <Link to='/dashboard'>
+                                <Button color='inherit'>Dashboard</Button>
+                            </Link>
+                        )
+                    }
       
             
                 </Toolbar>
