@@ -287,7 +287,6 @@ button:hover {
 
 
 .home_player { 
-    background: #ffffff;
     background: linear-gradient(to right, rgb(249, 253, 255) 50%, rgb(167, 216, 230));
 }
 
@@ -403,28 +402,6 @@ button:hover {
     color: #01285e;
 }
 
-.promotion_wrapper .enroll_wrapper {
-    text-align: center;
-}
-
-.promotion_wrapper .enroll_title {
-    font-family: 'Righteous', cursive;
-    font-size: 26px;
-    color: #01285e;
-}
-
-.promotion_wrapper .enroll_input {
-    width: 330px;
-    margin: 0 auto;
-    padding: 10px 0px;
-}
-
-.promotion_wrapper input:focus {
-    outline: none !important;
-    border:1px solid #FDB927 !important;
-    box-shadow: 0 0 10px #FDB927;
-}
-
 
 
 
@@ -488,6 +465,28 @@ button:hover {
     width: 310px;
     height: 310px;
     background-size: contain !important;
+}
+
+.promotion_wrapper .enroll_wrapper {
+    text-align: center;
+}
+
+.promotion_wrapper .enroll_title {
+    font-family: 'Righteous', cursive;
+    font-size: 26px;
+    color: #01285e;
+}
+
+.promotion_wrapper .enroll_input {
+    width: 330px;
+    margin: 0 auto;
+    padding: 10px 0px;
+}
+
+.promotion_wrapper input:focus {
+    outline: none !important;
+    border:1px solid #FDB927 !important;
+    box-shadow: 0 0 10px #FDB927;
 }
 
 
@@ -580,6 +579,10 @@ button:hover {
     align-items: center;
     justify-content: center;
 }
+
+.editplayer_wrapper {
+    padding-bottom: 20px;
+}
  
 .select_team_layout .wrapper {
     display: flex;
@@ -587,7 +590,7 @@ button:hover {
 }
 
 .editplayer_wrapper .editplayer_wrapper_inner {
-    width: 42vw !important;
+    max-width: 42vw !important;
 }
 
 .editplayer_wrapper .label_inputs {
@@ -622,7 +625,7 @@ button:hover {
 
 
 
-/* FILE UPLOADER FILE */
+/* FILE UPLOADER */
 .image_upload_container {
     position: relative;
     min-width: 30vw !important;
@@ -644,6 +647,44 @@ button:hover {
     cursor: pointer;
     background: rgb(255, 85, 18);
 }
+
+
+
+
+/*=============================
+            TEAM
+===============================*/
+
+.team_container {
+    margin-top: 88px;
+    padding: 20px;
+    background-size: 4px 5px !important;
+    min-height:100vh;
+    background: linear-gradient(to right, rgb(249, 253, 255) 50%, rgb(214, 246, 255));
+}
+
+.team_category_wrapper .title {
+    text-align: center;
+    font-size: 46px;
+    margin: 30px 0px;
+    font-family: 'Righteous', cursive;
+    color: #006BB6;
+}
+
+.team_category_wrapper .team_cards {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.team_category_wrapper .team_cards .item{
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
 
 
 
