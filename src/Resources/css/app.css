@@ -574,22 +574,30 @@ button:hover {
     font-size: 24px;
 }
 
-.editgame_wrapper {
+.editgame_wrapper,
+.editplayer_wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
 }
  
-.select_team_layout .wrapper{
+.select_team_layout .wrapper {
     display: flex;
     width: 48vw !important;
 }
 
-.select_team_layout .wrapper .left {
-    flex-grow: 1;
+.editplayer_wrapper div {
+    width: 42vw !important;
 }
 
-.select_team_layout input {
+.editplayer_wrapper .label_inputs {
+    width: 120px !important;
+    display: block;
+    margin-top: 22px;
+}
+
+.select_team_layout .wrapper .left {
+    flex-grow: 1;
 }
 
 .select_team_layout input[name=result_local_input],

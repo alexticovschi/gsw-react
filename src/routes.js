@@ -23,7 +23,8 @@ const Routes = (props) => {
         <PrivateRoute {...props} exact path="/admin_games/edit_game/:id" component={AddEditGame}/>
         <PrivateRoute {...props} exact path="/admin_games/add_game" component={AddEditGame}/>
         <PrivateRoute {...props} exact path="/admin_players" component={AdminPlayers}/>
-
+        <PrivateRoute {...props} exact path="/admin_players/edit_player/:id" component={AddEditPlayer}/>
+        <PrivateRoute {...props} exact path="/admin_players/add_player" component={AddEditPlayer}/>
         <PublicRoute {...props} restricted={true} exact path="/login" component={Login}/>
         <PublicRoute {...props} restricted={false} exact path="/" component={Home}/>
       </Switch> 
