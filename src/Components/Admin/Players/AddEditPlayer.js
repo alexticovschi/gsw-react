@@ -109,11 +109,15 @@ class AddEditPlayers extends Component {
     }
 
 
-    updateForm(element) {
+    updateForm(element, content='') {
         const newFormData = { ...this.state.formData };
         const newElement = { ...newFormData[element.id] };
 
-        newElement.value = element.event.target.value;
+        if(content === '') {
+            newElement.value = element.event.target.value;
+        } else {
+            newElement.value = content;
+        }
 
         let validData = validate(newElement);
         newElement.valid = validData[0];
@@ -140,6 +144,19 @@ class AddEditPlayers extends Component {
 
         if (formIsValid) {
             // submit form
+            if(this.state.formType === 'Edit Player') {
+                
+            } else {
+                // add player to database
+                firebasePlayers.push(dataToSubmit).then(() => {
+                    this.props.history.push('/admin_players')
+                }).catch(error => {
+                    this.setState({
+                        formError: true
+                    })
+                })
+            }
+            
         } else {
             this.setState({ formError: true })
         }
@@ -155,17 +172,18 @@ class AddEditPlayers extends Component {
         })
     }
 
-    storeFilename = () => {
-
+    storeFilename = (filename) => {
+        this.updateForm({ id: 'image' }, filename)
     }
 
     render() {
+        // console.log(this.state.formData)
         return (
             <AdminLayout>
                 <h2>{this.state.formType}</h2>
 
                 <div className="editplayer_wrapper">                
-                    <div className="editplayer_wrapper_inner">
+                    <div className="editplayer_wrapper">
                         <div>
                         <form onSubmit={(event) => this.submitForm(event)}>
 

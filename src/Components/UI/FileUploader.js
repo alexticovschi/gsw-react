@@ -42,6 +42,7 @@ class Fileuploader extends Component {
                 this.setState({ fileURL: url });
             });
         
+        this.props.filename(filename);
     }
 
     uploadAgain = () => {
@@ -83,7 +84,7 @@ class Fileuploader extends Component {
                     this.state.fileURL ?
                         <div className="image_upload_container">
                             <img 
-                                style={{width:'100%'}}
+                                style={{width:'42vw'}}
                                 src={this.state.fileURL} 
                                 alt={this.state.name}/>
                             
