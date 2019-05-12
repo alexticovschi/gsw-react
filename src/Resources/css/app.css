@@ -583,10 +583,10 @@ button:hover {
  
 .select_team_layout .wrapper {
     display: flex;
-    width: 48vw !important;
+    width: 40vw !important;
 }
 
-.editplayer_wrapper div {
+.editplayer_wrapper .editplayer_wrapper_inner {
     width: 42vw !important;
 }
 
@@ -619,6 +619,34 @@ button:hover {
 .admin_submit button:hover {
     background: #2672ac;
 }
+
+
+
+/* FILE UPLOADER FILE */
+.image_upload_container {
+    position: relative;
+    min-width: 30vw !important;
+}
+
+.image_upload_container .remove {
+    text-align: center;
+    right: 0;
+    background: rgb(221, 63, 0);
+    color: #ffffff;
+    border: 1px solid white;
+    padding: 10px 0px;
+    width: 100%;
+    border-radius: 4px;
+    transition: all .4s;
+}
+
+.image_upload_container .remove:hover {
+    cursor: pointer;
+    background: rgb(255, 85, 18);
+}
+
+
+
 
 
 
