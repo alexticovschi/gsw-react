@@ -41,7 +41,7 @@ class Games extends Component {
                             </div>
 
                             <div className="game_filters_box">
-                                
+
                             </div>
                         </div>
                         <GamesList games={this.state.filterGames}/>
