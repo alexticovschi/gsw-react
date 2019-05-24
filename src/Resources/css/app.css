@@ -346,10 +346,6 @@ button:hover {
     background-color: rgb(252, 205, 104);
 }
 
-.container_player_card {
-    /* margin-left: -50px; */
-}
-
 
 
 
@@ -688,6 +684,255 @@ button:hover {
 
 
 
+
+
+/*=============================
+         GAMES
+===============================*/
+
+.games_container {
+    margin-top: 87px;
+    min-height: 72vh;
+}
+
+.games_wrapper {
+    /* flex-grow: 1; */
+}
+
+
+.league_table_wrapper .title {
+    padding: 22px;
+    font-size: 22px;
+    color: #ffffff;
+    background: #98c6e9;
+    border-bottom: 1px solid #01285e;
+}
+
+.games_wrapper .progress {
+    text-align: center;
+    padding: 60px 0px;
+}
+
+
+.game_recap {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 4px;
+    background-color: rgb(138, 138, 138);
+    color: #fff;
+    cursor: pointer;
+
+    transition: all .4s;
+}
+
+.game_recap:hover {
+    background-color: rgb(95, 94, 94);
+}
+
+.block_wraper.info div {
+    margin: 5px 0px;
+}
+
+.game_filters {
+    display: flex;
+    border-bottom: 1px solid #01285e;
+    background: #77b7e7;
+    padding: 14px 0;
+    padding-left: 100px;
+}
+
+@media (max-width: 820px) {
+    .game_filters {
+        display: grid;
+        padding: 0;
+    }
+
+    .game_filters_box {
+        display: grid;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto;
+
+        border-bottom: 1px solid #fff;
+        padding: 10px 25px !important;
+    }
+
+    .game_filters .cont {
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 475px) {
+    .game_filters .option {
+        width: 100%;
+    }
+}
+
+.game_filters .tag {
+    font-weight: 300;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.game_filters .option {
+    background: #ffffff;
+    padding: 7px 11px;
+    border-radius: 3px;
+    font-size: 13px;
+    margin-right: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.game_filters .option.active {
+    background: #FDB927;
+    color: #fff;
+}
+
+.game_filters_box {
+    padding: 10px 60px;
+}
+
+.game_filters .cont {
+    display: flex;
+}
+
+
+.game_box_big {
+    width:100%;
+    border-bottom: 2px solid #006BB6;
+    padding: 10px 160px;
+    box-sizing: border-box;
+
+    display: grid;
+    grid-template-columns: 1.5fr 2fr 0.8fr;
+}
+
+.game_box_big .block {
+    display: grid;
+    grid-template-columns: 50px 1fr 1.5fr;
+    align-items: center;
+    justify-content: start;
+}
+
+.game_box_big .icon{
+    width: 50px;
+    height: 50px;
+    background-size: cover !important;
+}
+
+.game_box_big .block .team {
+    display: flex;
+}
+
+
+.game_box_big .block .team,
+.game_box_big .block .result {
+    font-size: 18px;
+    line-height: 51px;
+    margin-left: 18px;
+    font-weight: 300;
+    color: #282828;
+}
+
+.game_box_big .block .result {
+    font-weight: 500;    
+}
+
+.game_box_big .block .home_won {
+    color: rgb(3, 158, 3);
+    font-weight: 900;
+}
+
+.game_box_big .block .away_won {
+    color: rgb(173, 4, 4);
+    font-weight: 900;
+}
+
+.block_wraper.info {
+    border-left: 1px solid rgb(207, 220, 233);
+    height: 102px;
+    padding-left: 60px;
+    font-weight: 300;
+    color: #5e5e5e;
+    
+    display: grid;
+    align-items: center;
+    justify-content: start;
+}
+
+
+@media (max-width: 1210px) {
+    .game_box_big {
+        padding: 20px 150px;
+
+        /* grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr 1fr; */
+
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+        /* grid-template-columns: auto; */
+
+        grid-template-rows: auto;
+        grid-row-gap: 10px;
+    }
+
+    .game_box_big .block {
+        grid-template-columns: 42px 1.3fr 0.6fr !important;
+    }
+
+    .game_box_big .block .team {
+        font-size: 15.5px;
+        line-height: 50px;
+        margin-left: 10px;
+    }
+
+    .game_box_big .block .result {
+        margin-left: 0px;
+    }
+
+    .block_wraper.info {
+        border-left: none !important;
+        height: 94px;
+
+        padding-top: 5px;
+        padding-left: 10px;
+        font-size: 14px;
+
+        border-left: 1px solid rgb(207, 220, 233) !important;
+
+    }
+
+    .game_recap {
+        grid-column: span 2;   
+    }
+}
+
+@media (max-width: 1120px) {
+    .game_recap {
+        height: 50px !important;
+    }
+}
+
+@media (max-width: 800px) {
+    .game_box_big {
+        padding: 20px 20px;
+    }
+
+    .game_box_big .block .team {
+        margin-right: 10px;
+    }
+
+    .game_box_big .block .result {
+        font-size: 15px;
+    }
+
+    .game_recap {
+        height: 50px !important;  
+    }
+
+}
 
 
 
