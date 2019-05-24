@@ -10,6 +10,8 @@ import Team from './Components/Team';
 import Games from './Components/Games';
 import Login from './Components/Login';
 
+import NotFound from './Components/UI/NotFound';
+
 import Dashboard from './Components/Admin/Dashboard';
 import AdminGames from './Components/Admin/Games';
 import AddEditGame from './Components/Admin/Games/AddEditGame';
@@ -32,6 +34,7 @@ const Routes = (props) => {
         <PublicRoute {...props} restricted={false} exact path="/team" component={Team}/>
         <PublicRoute {...props} restricted={false} exact path="/games" component={Games}/>
         <PublicRoute {...props} restricted={false} exact path="/" component={Home}/>
+        <PublicRoute {...props} restricted={false} component={NotFound} />
       </Switch> 
     </Layout>
   )
