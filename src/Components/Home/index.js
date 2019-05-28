@@ -9,7 +9,7 @@ const Home = () => {
         <div className="bsk_blue">
             <Featured/>
             <Games/>
-            <HomePlayer/>
+            {/* <HomePlayer/> */}
             <Promotion/>
         </div>
     );

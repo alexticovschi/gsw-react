@@ -7,37 +7,37 @@ import Stephen_Curry from '../../../Resources/images/stephen_curry5.png';
 import Klay_Thompson from '../../../Resources/images/klay_thompson.png';
 
 const Text = () => {
-    const animateNumber = () => (
-        <Animate
-            show={true}
-            start={{
-                opacity: 0,
-                rotate: 0
-            }}
+    // const animateNumber = () => (
+    //     <Animate
+    //         show={true}
+    //         start={{
+    //             opacity: 0,
+    //             rotate: 0
+    //         }}
 
-            enter={{
-                opacity: [1],
-                rotate: [360],
-                timing: {
-                    duration: 1000,
-                    ease: easePolyOut
-                }
-            }}
-        >
-            {({ opacity, rotate }) => {
-                return (
-                    <div className="featured_number"
-                        style={{
-                            opacity,
-                            transform: `translate(-320px, -170px) rotateY(${rotate}deg)`
-                        }}
-                    >
+    //         enter={{
+    //             opacity: [1],
+    //             rotate: [360],
+    //             timing: {
+    //                 duration: 1000,
+    //                 ease: easePolyOut
+    //             }
+    //         }}
+    //     >
+    //         {({ opacity, rotate }) => {
+    //             return (
+    //                 <div className="featured_number"
+    //                     style={{
+    //                         opacity,
+    //                         transform: `translate(-320px, -170px) rotateY(${rotate}deg)`
+    //                     }}
+    //                 >
                         
-                    </div>
-                )
-            }}
-        </Animate>
-    );
+    //                 </div>
+    //             )
+    //         }}
+    //     </Animate>
+    // );
 
     const animateFirst = () => (
         <Animate
@@ -130,46 +130,37 @@ const Text = () => {
         >
             {({ opacity, rotate }) => {
                 return (
-                    <div>   
-                        <div className="featured_player"
+                    <div className="featured_players">   
+                        <div className="featured_player left"
                             style={{
                                 opacity,
                                 background: `url(${Kevin_Durant})`,
-                                transform: `translate(-740px, -310px)`
+                                // transform: `translate(-740px, -310px)`
                             }}
                         >
             
                         </div>
 
-                        <div className="featured_player"
+                        <div className="featured_player middle"
                             style={{
                                 opacity,
                                 background: `url(${Stephen_Curry})`,
-                                transform: `translate(-230px, -390px)`
+                                // transform: `translate(-230px, -390px)`
                             }}
                         >
             
                         </div>
 
-                        <div className="featured_player"
+                        <div className="featured_player right"
                             style={{
                                 opacity,
                                 background: `url(${Klay_Thompson})`,
-                                transform: `translate(270px, -340px)`
+                                // transform: `translate(270px, -340px)`
                             }}
                         >
             
                         </div>
                     </div>
-                    // <div className="featured_player"
-                    //     style={{
-                    //         opacity,
-                    //         background: `url(${FeaturedPlayer})`,
-                    //         transform: `translate(-100px, -210px)`
-                    //     }}
-                    // >
-        
-                    // </div>
                 )
             }}
         </Animate>
@@ -178,9 +169,10 @@ const Text = () => {
     return (
         <div className="featured_text">
             {animatePlayer()}
-            {/* {animateNumber()} */}
-            {animateFirst()}
-            {animateSecond()}
+            <div className="featured_txt">
+                {animateFirst()}
+                {animateSecond()}
+            </div>
         </div>
     );
 };
