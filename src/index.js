@@ -2,6 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './Resources/css/app.css';
 
+import ScrollToTop from './Components/ScrollToTop';
+
+
 import { BrowserRouter } from 'react-router-dom';
 import Routes from './routes';
 import { firebase } from './firebase';
@@ -9,7 +12,9 @@ import { firebase } from './firebase';
 const App = (props) => {
     return (
         <BrowserRouter>
-            <Routes {...props}/>
+            <ScrollToTop>
+                <Routes {...props}/>
+            </ScrollToTop>
         </BrowserRouter>
     )
 }
