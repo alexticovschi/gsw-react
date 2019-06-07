@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Reveal from 'react-reveal/Reveal';
-import HomeCards from './Cards';
+import HomeCard from './Card';
 
 class HomePlayers extends Component {
 
@@ -22,7 +22,7 @@ class HomePlayers extends Component {
                     <div className="container">
                         <div className="home_player_wrapper">
                             <div className="home_card_wrapper">
-                                <HomeCards
+                                <HomeCard
                                     show={this.state.show}
                                 />
                             </div>
