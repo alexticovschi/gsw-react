@@ -11,14 +11,16 @@ const PlayerCard = (props) => {
             >                
             </div>
             <div className="player_card_info">
+                <div className="player_card_name">
+                    <div className="player_card_name">
+                        <div>{props.firstname} {props.lastname}</div>
+                    </div>
+
+                    <div className="position">{props.position}</div>
+                </div>
                 <div className="player_card_number">
                     {props.number}
                 </div>
-                <div className="player_card_name">
-                    <div>{props.firstname}</div>
-                    <div>{props.lastname}</div>
-                </div>
-                <div>{props.position}</div>
             </div>
         </div>
     );

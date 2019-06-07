@@ -66,7 +66,7 @@ class GamesList extends Component {
                                     transform: `translate(${x}px)`
                                 }}
                             >
-                                <div className="block_wraper">
+                                <div className="block_wrapper">
                                     <div className="block">
                                         <div className="icon" style={{background: `url(/images/team_icons/${data.localThmb}.svg)`}}>
                                         
@@ -86,9 +86,9 @@ class GamesList extends Component {
                                     </div>
                                 </div>
 
-                                <div className="block_wraper info">
-                                    <div><strong>Date:</strong> {data.date}</div>
-                                    <div><strong>Arena:</strong> {data.arena}</div>
+                                <div className="block_wrapper info">
+                                    <div><span>Date:</span> {data.date}</div>
+                                    <div><span>Arena:</span> {data.arena}</div>
                                 </div>
 
                                 <div className="game_recap">
