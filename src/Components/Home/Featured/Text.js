@@ -167,12 +167,16 @@ const Text = () => {
     )
 
     return (
-        <div className="featured_text">
-            {animatePlayer()}
-            <div className="featured_txt">
-                {animateFirst()}
-                {animateSecond()}
+        <div>
+            <div className="featured_text">
+                {animatePlayer()}
             </div>
+                    
+            {/* <div className="featured_txt">
+                <div className="featured_first">Golden</div>
+                <div className="featured_second">State Warriors</div>
+            </div> */}
+            
         </div>
     );
 };
