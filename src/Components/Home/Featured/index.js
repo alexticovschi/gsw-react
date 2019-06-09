@@ -7,7 +7,12 @@ const Featured = () => {
         <div className="featured_wrapper">
             <Stripes/>
             <Text/>
+
+            <div className="gsw_text">
+                <img src="/images/gsw.png" alt=""/>
+            </div>
         </div>
+        
     );
 };
 
