@@ -897,6 +897,22 @@ button:hover {
 
 
 
+/*=============================
+         PLAYER INFO
+===============================*/
+
+.player_info_wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.player_info_wrapper  .player_info_progress {
+    text-align: center;
+    margin: 50px 0px;
+}
+
 
 
 /*=============================

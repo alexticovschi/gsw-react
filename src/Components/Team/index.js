@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PlayerCard from '../UI/PlayerCard';
 import Fade from 'react-reveal/Fade';
+import { Link } from 'react-router-dom';
 
 import { firebasePlayers, firebase } from '../../firebase';
 import { firebaseLooper } from '../../miscellaneous';
@@ -49,17 +50,19 @@ class Team extends Component {
         this.state.players ?
             this.state.players.map((player, i) => {
                 return player.position === category ?
-                    <Fade left delay={20*i} key={i}>
-                        <div className="item">
-                            <PlayerCard
-                                number={player.number}
-                                firstname={player.firstname}
-                                lastname={player.lastname}
-                                position={player.position}
-                                bck={player.url}
-                            />
-                        </div>
-                    </Fade>
+                    <Link className="item" to={`/player-info/${player.id}`} key={player.id}>
+                        <Fade left delay={20*i}>
+                            <div className="item">
+                                <PlayerCard
+                                    number={player.number}
+                                    firstname={player.firstname}
+                                    lastname={player.lastname}
+                                    position={player.position}
+                                    bck={player.url}
+                                />
+                            </div>
+                        </Fade>
+                    </Link>
                 : null
             })
         : null
