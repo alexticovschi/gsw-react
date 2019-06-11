@@ -517,6 +517,11 @@ button:hover {
     font-family: 'Righteous';
     border-radius: 6px;
     box-shadow: 2px 5px 15px 0px rgba(0, 0, 0, 0.15);
+    transition: all .4s;
+}
+
+.player_card_wrapper:hover {
+    box-shadow: 5px 8px 14px 8px rgba(0, 0, 0, 0.15);
 }
 
 .player_card_wrapper .player_card_thmb {
@@ -943,6 +948,7 @@ button:hover {
     align-items: center;
     justify-content: center;
 
+    font-size: 16px;
     border-radius: 4px;
     background-color: rgb(138, 138, 138);
     color: #fff;
@@ -1078,6 +1084,7 @@ button:hover {
 .block_wrapper.info {
     border-left: 1px solid rgb(207, 220, 233);
     padding-left: 60px;
+    font-size: 16px;
     font-weight: 300;
     color: #6c7174;
     
@@ -1087,7 +1094,7 @@ button:hover {
 }
 
 .block_wrapper.info span {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
 }
 
