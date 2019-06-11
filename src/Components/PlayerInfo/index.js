@@ -52,17 +52,17 @@ class PlayerInfo extends Component {
                         </div>
                     : 
                         <div className="card_wrapper">
-                            <img className="gsw_logo" src="/images/gsw_logo.png" alt=""/>
-
                             <div class="card">
 
                                 <div class="card-thumb">
+                                    <img className="gsw_logo" src="/images/gsw_logo.png" alt=""/>
+
                                     <img src={this.state.playerImgURL} />
                                 </div>
 
                                 <div class="card-content">
                                     <div className="card-content-info">
-                                        <h2>{playerInfo.firstname} {playerInfo.lastname}</h2>
+                                        <h2 className="player-name">{playerInfo.firstname} {playerInfo.lastname}</h2>
                                     
 
                                         <div class="card-info">

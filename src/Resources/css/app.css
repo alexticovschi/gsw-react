@@ -453,7 +453,7 @@ button:hover {
 .home_player .home_text_wrapper .tags.tag1 {
     margin-bottom: 30px;
     padding: 10px 60px;
-    width: 150px;
+    max-width: 260px;
 }
 
 .home_player .home_text_wrapper .tag3 {
@@ -483,7 +483,7 @@ button:hover {
 
 @media (max-width: 330px) {
     .home_player .home_text_wrapper .tags {
-        font-size: 26px !important;
+        font-size: 24px !important;
         padding: 10px 10px !important;
     }
 
@@ -492,12 +492,12 @@ button:hover {
     }
 
     .home_player .home_text_wrapper .tag3 {
-        font-size: 25px;
+        font-size: 23px;
     }
 
     .home_player .home_text_wrapper .tag2,
     .home_player .home_text_wrapper .tag3 {
-        width: 230px !important; 
+        width: 250px !important; 
     }
 
 }
