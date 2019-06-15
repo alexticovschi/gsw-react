@@ -33,8 +33,8 @@ body {
   position: relative;
   width: 350px;
   height: 350px;
-  padding: 10px;
-  border-radius: 200px;
+  padding: 15px;
+  border-radius: 300px;
   z-index: 1000;
   overflow: hidden;
   background: rgb(255, 202, 89);
@@ -44,20 +44,26 @@ body {
   align-items: center;
   justify-content :center;
 }
-.card .card-thumb img {
-  height: 80%;
-  z-index: 10;
+
+.card .card-thumb div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .card-thumb .player_img {
+  z-index: 1000;
+  border-radius: 200px;
 }
 
 .card .card-thumb .gsw_logo {
   position: absolute;
-  opacity: 0.09;
+  opacity: 0.13;
   z-index: 0;
-  height: 100% !important;
-  width: 100%;
-
-  border-radius: 100%;
+  /* height: 100%;
+  width: 100%; */
 }
+
 .card .card-content {
   width: 100%;
 
@@ -131,16 +137,16 @@ body {
 }
 
 
-@media (min-width: 1367px){
+/* @media (min-width: 1367px){
   .card .card-thumb {
-    width: 410px !important;
+    width: 500px !important;
   }
-}
+} */
 
 @media (min-width: 1365px){
   .card .card-thumb {
-    height: 220px !important;
-    width: 580px;
+    height: 280px !important;
+    width: 600px !important;
   }
       
   .card .card-content {

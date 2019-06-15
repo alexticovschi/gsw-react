@@ -55,9 +55,10 @@ class PlayerInfo extends Component {
                             <div class="card">
 
                                 <div class="card-thumb">
-                                    <img className="gsw_logo" src="/images/gsw_logo.png" alt=""/>
-
-                                    <img src={this.state.playerImgURL} />
+                                    <div>
+                                        <img className="gsw_logo" src="/images/gsw_logo.png" alt=""/>
+                                        <img className="player_img" src={this.state.playerImgURL} />
+                                    </div>
                                 </div>
 
                                 <div class="card-content">
