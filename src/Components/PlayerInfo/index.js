@@ -67,7 +67,7 @@ class PlayerInfo extends Component {
 
                                         <div class="card-info">
                                             <span>HEIGHT:</span>
-                                            <span>{playerInfo.height} ft</span>
+                                            <span>{playerInfo.height}</span>
                                         </div>
 
                                         <div class="card-info">

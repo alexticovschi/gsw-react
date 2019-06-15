@@ -32,6 +32,10 @@ class Header extends Component {
                         </div>
                     </div>
 
+                    <Link to='/'>
+                        <Button color='inherit'>Home</Button>
+                    </Link>
+
                     <Link to='/team'>
                         <Button color='inherit'>Team</Button>
                     </Link>
