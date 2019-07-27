@@ -1,6 +1,6 @@
 import React from 'react';
 import StephenCurry from '../../../Resources/images/stephen-curry.png'
-import PlayerCard from '../../UI/PlayerCard';
+import PlayerCard from '../../UI/PlayerCard/PlayerCard';
 
 const Card = () => {
     return (

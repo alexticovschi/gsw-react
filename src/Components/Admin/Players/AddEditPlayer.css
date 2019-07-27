@@ -1,0 +1,31 @@
+.editplayer_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.select_team_layout .wrapper {
+    display: flex;
+    width: 30vw !important;
+}
+
+.editplayer_wrapper .editplayer_wrapper_inner {
+    max-width: 30vw !important;
+}
+
+.editplayer_wrapper .label_inputs {
+    display: inline-block;
+}
+
+.select_team_layout .wrapper .left {
+    flex-grow: 1;
+}
+
+.select_team_layout input[name="result_local_input"],
+.select_team_layout input[name="result_away_input"] {
+    width: 60px;
+    text-align: center;
+    background: #063d68;
+    color: #ffffff;
+}

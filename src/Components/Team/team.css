@@ -1,0 +1,48 @@
+/*=============================
+            TEAM
+===============================*/
+
+.team_container {
+    margin-top: 88px;
+    padding: 20px;
+    background-size: 4px 5px !important;
+    min-height: 100vh;
+    background: linear-gradient(to right,
+            rgb(249, 253, 255) 50%,
+            rgb(214, 246, 255));
+}
+
+.team_category_wrapper .title {
+    text-align: center;
+    font-size: 46px;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    font-family: "Righteous", cursive;
+    color: #006bb6;
+}
+
+.team_category_wrapper .team_cards {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.team_category_wrapper .team_cards .item {
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 700px) {
+    .team_category_wrapper .title {
+        font-size: 36px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .player_card_wrapper {
+        min-width: 80vw;
+    }
+}

@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import Reveal from 'react-reveal/Reveal';
 import HomeCard from './Card';
 
+import './homeplayer.css';
+
 class HomePlayers extends Component {
 
     state = {

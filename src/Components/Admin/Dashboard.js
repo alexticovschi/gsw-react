@@ -1,6 +1,8 @@
 import React from 'react';
 import AdminLayout from '../../HOC/AdminLayout';
 
+import './admin-dashboard.css';
+
 const Dashboard = () => {
     return (
         <AdminLayout>

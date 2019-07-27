@@ -3,6 +3,8 @@ import FormField from '../UI/FormFields.js';
 import { validate } from '../../miscellaneous';
 import { firebase } from '../../firebase';
 
+import './login.css';
+
 class Login extends Component {
 
     state = {

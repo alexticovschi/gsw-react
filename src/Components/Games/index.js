@@ -6,6 +6,8 @@ import { firebaseLooper, reverseArray } from '../../miscellaneous';
 
 import GamesList from './GamesList';
 
+import './games.css';
+
 class Games extends Component {
  
     state = {

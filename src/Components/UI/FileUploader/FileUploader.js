@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
-import { firebase } from '../../firebase';
+import { firebase } from '../../../firebase';
 import FileUploader from 'react-firebase-file-uploader';
 import CircularProgress from '@material-ui/core/CircularProgress';
+
+import './fileuploader.css';
 
 class Fileuploader extends Component {
 

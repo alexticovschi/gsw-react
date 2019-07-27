@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import PlayerCard from '../UI/PlayerCard';
+import PlayerCard from '../UI/PlayerCard/PlayerCard';
 import Fade from 'react-reveal/Fade';
 import { Link } from 'react-router-dom';
 
 import { firebasePlayers, firebase } from '../../firebase';
 import { firebaseLooper } from '../../miscellaneous';
 import { Promise } from 'core-js';
+
+import './team.css';
 
 class Team extends Component {
 

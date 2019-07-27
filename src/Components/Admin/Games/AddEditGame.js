@@ -7,6 +7,8 @@ import { validate } from '../../../miscellaneous';
 import { firebaseTeams, firebaseDB, firebaseGames } from '../../../firebase';
 import { firebaseLooper } from '../../../miscellaneous';
 
+import "./AddEditGame.css";
+
 class AddEditGame extends Component {
     state = {
         gameId: '',

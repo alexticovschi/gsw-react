@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import ListItem from '@material-ui/core/ListItem';
 import { firebase } from '../../../firebase';
 
+import './admin-nav.css';
+
 const AdminNav = () => {
 
     const links = [

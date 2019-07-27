@@ -1,6 +1,8 @@
 import React from 'react';
 import { Logo } from '../UI/Logo'
 
+import './footer.css';
+
 const Footer = () => {
     return (
         <footer className="dark_blue">

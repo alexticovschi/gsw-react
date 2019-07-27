@@ -5,6 +5,8 @@ import { firebaseLooper, reverseArray } from '../../../miscellaneous';
 import GameBlock from '../../UI/GameBlock';
 import Slide from 'react-reveal/Slide';
 
+import './gameblock.css';
+
 class Blocks extends Component {
 
     state = {

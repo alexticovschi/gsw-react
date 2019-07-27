@@ -1,6 +1,8 @@
 import React from 'react';
 import AdminNav from '../Components/Admin/Nav';
 
+import './adminlayout.css';
+
 const AdminLayout = (props) => {
     return (
         <div className="admin_container">

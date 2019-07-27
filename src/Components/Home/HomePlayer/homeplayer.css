@@ -1,0 +1,93 @@
+/*=============================
+        HOME PLAYER
+===============================*/
+
+.home_player {
+    background: linear-gradient(to right,
+            rgb(249, 253, 255) 50%,
+            rgb(167, 216, 230));
+}
+
+.home_player_wrapper {
+    min-height: 80vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.home_player .home_card_wrapper {
+    padding-top: 90px;
+    padding-bottom: 60px;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.home_player .home_text_wrapper {
+    padding-top: 60px;
+    padding-bottom: 90px;
+
+    display: grid;
+    align-content: center;
+    justify-content: center;
+}
+
+.home_player .home_text_wrapper .tags {
+    background-color: #006bb6;
+    border-radius: 4px;
+
+    font-size: 60px;
+    padding: 10px 60px;
+    color: #fff;
+    font-family: "Righteous";
+}
+
+.home_player .home_text_wrapper .tags.tag1 {
+    margin-bottom: 30px;
+    padding: 10px 60px;
+    max-width: 260px;
+}
+
+.home_player .home_text_wrapper .tag3 {
+    background-color: var(--gsw-color);
+    color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 209, 109);
+    border-radius: 4px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 30px;
+    font-family: "Righteous", cursive;
+    padding: 10px 20px;
+    box-shadow: 2px 5px 15px 0px rgba(0, 0, 0, 0.15);
+    transition: all 0.6s;
+}
+
+.home_player .home_text_wrapper .tag3:hover {
+    background-color: rgb(252, 205, 104);
+}
+
+@media (max-width: 800px) {
+    .home_player .home_text_wrapper .tags {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 330px) {
+    .home_player .home_text_wrapper .tags {
+        font-size: 24px !important;
+        padding: 10px 10px !important;
+    }
+
+    .home_player .home_text_wrapper .tag2 {
+        margin-top: -14px;
+    }
+
+    .home_player .home_text_wrapper .tag3 {
+        font-size: 23px;
+    }
+
+    .home_player .home_text_wrapper .tag2,
+    .home_player .home_text_wrapper .tag3 {
+        width: 250px !important;
+    }
+}

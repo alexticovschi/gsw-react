@@ -1,3 +1,7 @@
+/*=============================
+         PLAYER INFO
+===============================*/
+
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,400i,700");
 * {
   box-sizing: border-box;
@@ -6,6 +10,19 @@
 body {
   font-size: 20px;
 }
+
+.player_info_wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player_info_wrapper .player_info_progress {
+  text-align: center;
+  margin: 50px 0px;
+}
+
 
 .player-name {
   font-family: 'Righteous', cursive;

@@ -5,9 +5,11 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 
 import FormField from '../../UI/FormFields';
 import { validate } from '../../../miscellaneous';
-import FileUploader from '../../UI/FileUploader';
+import FileUploader from '../../UI/FileUploader/FileUploader';
 
 import { firebasePlayers, firebaseDB, firebase } from '../../../firebase';
+
+import "./AddEditPlayer.css";
 
 
 class AddEditPlayers extends Component {

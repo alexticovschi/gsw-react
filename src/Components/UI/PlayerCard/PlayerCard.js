@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './playercard.css';
+
 const PlayerCard = (props) => {
     return (
         <div className="player_card_wrapper">

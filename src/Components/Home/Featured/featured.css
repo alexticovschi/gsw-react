@@ -1,0 +1,134 @@
+/*=============================
+            FEATURED
+===============================*/
+
+.featured_wrapper {
+    position: relative;
+    min-height: 100vh !important;
+    /* overflow: hidden; */
+    background-color: #fff;
+    background: radial-gradient(circle,
+            var(--color1) 30%,
+            var(--color2),
+            var(--color3));
+
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.gsw_text {
+    max-width: 100vw !important;
+    z-index: 10;
+    position: absolute;
+    background: #fff;
+    margin-top: 60px;
+    height: 70vh;
+    opacity: 0.3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gsw_text img {
+    width: 75vw;
+}
+
+.featured_stripes {
+    position: absolute;
+    min-height: 100vh !important;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.featured_stripes .stripe {
+    width: 23vw;
+    /* overflow: visible; */
+    min-height: 100vh !important;
+    position: relative;
+    /* transform: skew(-0.00turn, 0deg) !important; */
+}
+
+.featured_number {
+    font-size: 110px;
+    color: #ffffff;
+    transform: translate(260px, 170px);
+    position: absolute;
+    text-shadow: 2px 3px 8px #7a7777;
+}
+
+.featured_players {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* grid-template-columns: repeat(3, 1fr); */
+}
+
+.featured_player {
+    z-index: 100;
+    width: 28vw;
+    height: 100vh;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+}
+
+.featured_first {
+    background: #0e1731;
+    color: var(--gsw-color);
+    margin-top: -430px;
+    margin-left: 0px;
+}
+
+.featured_second {
+    background: #0e1731;
+    color: #ffffff;
+    margin-top: -320px;
+    margin-left: 0px;
+}
+
+.featured_first,
+.featured_second {
+    position: absolute;
+    display: inline-block;
+    font-size: 82px;
+    text-transform: uppercase;
+    padding: 0px 20px;
+}
+
+.featured_txt {
+    position: relative;
+}
+
+.featured_text {
+    position: relative;
+    font-family: "Righteous", cursive;
+    height: 100vh;
+}
+
+@media (max-width: 800px) {
+    .featured_text {
+        top: 70px;
+        height: 50vh;
+    }
+
+    .featured_player {
+        width: 25vw;
+    }
+
+    .featured_stripes .stripe {
+        width: 28vw;
+    }
+}
+
+@media (max-width: 450px) {
+    .featured_player {
+        width: 33vw;
+    }
+
+    .featured_stripes .stripe {
+        width: 33.33vw;
+    }
+}
