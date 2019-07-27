@@ -60,8 +60,6 @@ body {
   position: absolute;
   opacity: 0.13;
   z-index: 0;
-  /* height: 100%;
-  width: 100%; */
 }
 
 .card .card-content {
@@ -136,12 +134,6 @@ body {
   border-bottom: 1px solid rgb(218, 218, 218);
 }
 
-
-/* @media (min-width: 1367px){
-  .card .card-thumb {
-    width: 500px !important;
-  }
-} */
 
 @media (min-width: 1365px){
   .card .card-thumb {

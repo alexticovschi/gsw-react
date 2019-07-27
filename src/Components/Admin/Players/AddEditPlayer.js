@@ -254,8 +254,7 @@ class AddEditPlayers extends Component {
                                     filename={(filename) => this.storeFilename(filename)}
                                 />
                             }
-                            
-                            
+
 
                             <FormField
                                 id={'firstname'}

@@ -33,7 +33,7 @@ const AdminNav = () => {
     const renderItems = () => (
         links.map(link => (
             <Link to={link.linkTo} key={link.title}>
-                <ListItem button style={styles}>
+                <ListItem button style={styles} className="admin_nav_link">
                     {link.title}
                 </ListItem>
             </Link>
@@ -51,7 +51,7 @@ const AdminNav = () => {
     return (
         <div>
             {renderItems()}
-            <ListItem button 
+            <ListItem button className="admin_nav_link"
                 style={styles}
                 onClick={() => logoutHandler()}
                 >
