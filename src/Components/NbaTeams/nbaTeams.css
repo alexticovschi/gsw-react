@@ -1,0 +1,67 @@
+.back_grnd {
+    background: radial-gradient(circle,
+    var(--color1) 40%,
+    var(--color2),
+    var(--color3));
+}
+
+.nba_teams_wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.nba_teams_progress {
+    text-align: center;
+    margin: 50px 0px;
+}
+
+.nba_teams_container {
+    max-width: 1470px;
+    margin: 0 auto;
+}
+
+
+.nba_teams {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    grid-column-gap: 78px;
+    grid-row-gap: 100px;
+
+    padding: 150px 0px;
+}
+
+.nba-team {
+    background-color: aliceblue;
+    border-radius: 5px;
+    width: 100%;
+    height: 50%;
+    font-size: 21px;
+    color: white;
+    color: rgb(5, 5, 5);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    align-items: center;
+    transition: all 0.4s;
+}
+
+.nba-team:hover {
+    box-shadow: 5px 8px 14px 8px rgba(7, 6, 6, 0.15);
+}
+
+.team-name {
+    font-size: 18px;
+    text-align: center;
+}
+
+.team-logo {
+    width: 85px;
+    margin: auto;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
