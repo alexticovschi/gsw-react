@@ -42,6 +42,10 @@ class Header extends Component {
                     <Link to='/games'>
                         <Button color='inherit'>Games</Button>
                     </Link>
+
+                    <Link to='/nba-teams'>
+                        <Button color='inherit'>NBA Teams</Button>
+                    </Link>
                     
                     {
                         !this.props.user ? (

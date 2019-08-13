@@ -10,6 +10,8 @@ import Team from './Components/Team';
 import Games from './Components/Games';
 import Login from './Components/Login';
 import PlayerInfo from './Components/PlayerInfo';
+import NbaTeam from './Components/NbaTeam';
+import NbaTeams from './Components/NbaTeams';
 
 import NotFound from './Components/UI/NotFound';
 
@@ -32,6 +34,8 @@ const Routes = (props) => {
         <PrivateRoute {...props} exact path="/admin_players/add_player" component={AddEditPlayer}/>
 
         <PublicRoute {...props} restricted={true} exact path="/login" component={Login}/>
+        <PublicRoute {...props} restricted={false} exact path="/nba-team/:teamId" component={NbaTeam}/>
+        <PublicRoute {...props} restricted={false} exact path="/nba-teams" component={NbaTeams}/>
         <PublicRoute {...props} restricted={false} exact path="/player-info/:id" component={PlayerInfo}/>
         <PublicRoute {...props} restricted={false} exact path="/team" component={Team}/>
         <PublicRoute {...props} restricted={false} exact path="/games" component={Games}/>
