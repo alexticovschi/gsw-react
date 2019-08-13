@@ -4,9 +4,10 @@ import { Link } from "react-router-dom";
 import CircularProgress from "@material-ui/core/CircularProgress";
 import { firebaseLooper } from "../../miscellaneous";
 
-import { firebaseDB, firebaseTeams } from "../../firebase";
+import { firebaseTeams } from "../../firebase";
 
 import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Zoom";
 
 import "./nbaTeams.css";
 
@@ -35,16 +36,18 @@ class NbaTeams extends Component {
     teams
       ? teams.map((team, i) => (
           <Link to={`/nba-team/${team.id}`}>
-            <Fade right delay={20*i} key={team.teamId}>
+            <Fade right delay={20 * i} key={team.teamId}>
               <div className="wrapper">
                 <div className="game_block">
                   <div className="nba-team">
                     <div className="team-name">{team.name}</div>
-                    {/* <div>{team.teamId}</div> */}
-                    <img
-                      className="team-logo"
-                      src={`images/team_icons/${team.thmb}.svg`}
-                    />
+
+                    <Zoom delay={500}>
+                      <img
+                        className="team-logo"
+                        src={`images/team_icons/${team.thmb}.svg`}
+                      />
+                    </Zoom>
                   </div>
                 </div>
               </div>

@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 import { firebaseDB } from "../../firebase";
 
 import Fade from 'react-reveal/Fade';
+import Zoom from 'react-reveal/Zoom';
+
+
 import "./nbaTeam.css";
 
 class NbaTeam extends Component {
@@ -52,15 +55,16 @@ class NbaTeam extends Component {
     players
       ? players.filter(player => player.strPosition !== "Manager").map((player, i) => (
           <Link to={`/nba-team/${player.id}`}>
-            <Fade left delay={20*i} key={player.teamId}>
+            <Fade left delay={45*i} key={player.teamId}>
               <div className="wrapper">
                 <div className="nba-player">
                   <div className="card-box-left">
                     <div className="nba-player-name">{player.strPlayer}</div>
                     <div className="nba-player-position">{player.strPosition}</div>
                   </div>
-                  
-                  <img className="nba-player-logo" src={`${player.strCutout}`} />
+                  <Zoom delay={500}>
+                    <img className="nba-player-logo" src={`${player.strCutout}`} />
+                  </Zoom>
                 </div>
               </div>
             </Fade>
