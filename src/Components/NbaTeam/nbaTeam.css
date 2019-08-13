@@ -19,7 +19,7 @@
     color: rgb(5, 5, 5);
 
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
+    grid-template-columns: 1fr 1.2fr;
     align-content: center;
     align-items: center;
 
@@ -33,10 +33,11 @@
 .nba-player-name {
     font-size: 16px;
     text-align: center;
-    padding: 21px 0;
+    padding: 21px;
     background-color: rgb(43, 138, 161);
     color: #fff;
     border-top-left-radius: 10px;
+    margin: 10px 2px;
 }
 
 .nba-player-position {
@@ -64,6 +65,7 @@
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
 }
+
 
 
 @media (max-width: 460px) {

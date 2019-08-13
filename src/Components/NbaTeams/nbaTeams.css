@@ -28,7 +28,7 @@
 
 .nba_teams {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     grid-column-gap: 78px;
     grid-row-gap: 50px;
 
