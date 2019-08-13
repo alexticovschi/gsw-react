@@ -6,7 +6,7 @@ import { firebaseLooper } from "../../miscellaneous";
 
 import { firebaseDB, firebaseTeams } from "../../firebase";
 
-import Slide from "react-reveal/Slide";
+import Fade from "react-reveal/Fade";
 
 import "./nbaTeams.css";
 
@@ -33,9 +33,9 @@ class NbaTeams extends Component {
 
   displayTeams = teams =>
     teams
-      ? teams.map(team => (
+      ? teams.map((team, i) => (
           <Link to={`/nba-team/${team.id}`}>
-            <Slide bottom key={team.teamId}>
+            <Fade right delay={20*i} key={team.teamId}>
               <div className="wrapper">
                 <div className="game_block">
                   <div className="nba-team">
@@ -48,7 +48,7 @@ class NbaTeams extends Component {
                   </div>
                 </div>
               </div>
-            </Slide>
+            </Fade>
           </Link>
         ))
       : null;

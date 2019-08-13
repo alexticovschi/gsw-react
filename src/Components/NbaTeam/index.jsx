@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 import { firebaseDB } from "../../firebase";
 
-import Slide from "react-reveal/Slide";
+import Fade from 'react-reveal/Fade';
 import "./nbaTeam.css";
 
 class NbaTeam extends Component {
@@ -50,9 +50,9 @@ class NbaTeam extends Component {
 
   displayPlayers = players =>
     players
-      ? players.filter(player => player.strPosition !== "Manager").map(player => (
+      ? players.filter(player => player.strPosition !== "Manager").map((player, i) => (
           <Link to={`/nba-team/${player.id}`}>
-            <Slide bottom key={player.teamId}>
+            <Fade left delay={20*i} key={player.teamId}>
               <div className="wrapper">
                 <div className="nba-player">
                   <div className="card-box-left">
@@ -63,7 +63,7 @@ class NbaTeam extends Component {
                   <img className="nba-player-logo" src={`${player.strCutout}`} />
                 </div>
               </div>
-            </Slide>
+            </Fade>
           </Link>
         ))
       : null;

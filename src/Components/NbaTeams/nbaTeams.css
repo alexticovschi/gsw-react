@@ -10,7 +10,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .nba_teams_progress {
@@ -19,8 +18,11 @@
 }
 
 .nba_teams_container {
+    overflow-x: hidden;
     max-width: 1470px;
     margin: 0 auto;
+    
+    min-height: 100vh;
 }
 
 
@@ -28,13 +30,16 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
     grid-column-gap: 78px;
-    grid-row-gap: 100px;
+    grid-row-gap: 50px;
 
-    padding: 150px 0px;
+    padding: 150px 20px;
 }
 
 .nba-team {
-    background-color: aliceblue;
+    background: linear-gradient(-48deg,
+            rgb(255, 255, 255) 30%,
+            rgb(228, 242, 252) 40%,
+            rgb(176, 222, 255) 55%);
     border-radius: 5px;
     width: 100%;
     height: 50%;
