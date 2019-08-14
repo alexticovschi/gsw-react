@@ -11,6 +11,7 @@ import Games from './Components/Games';
 import Login from './Components/Login';
 import PlayerInfo from './Components/PlayerInfo';
 import NbaTeam from './Components/NbaTeam';
+import NbaPlayerInfo from './Components/NbaPlayerInfo';
 import NbaTeams from './Components/NbaTeams';
 
 import NotFound from './Components/UI/NotFound';
@@ -35,6 +36,7 @@ const Routes = (props) => {
 
         <PublicRoute {...props} restricted={true} exact path="/login" component={Login}/>
         <PublicRoute {...props} restricted={false} exact path="/nba-team/:teamId" component={NbaTeam}/>
+        <PublicRoute {...props} restricted={false} exact path="/nba-team/player/:playerId" component={NbaPlayerInfo}/>
         <PublicRoute {...props} restricted={false} exact path="/nba-teams" component={NbaTeams}/>
         <PublicRoute {...props} restricted={false} exact path="/player-info/:id" component={PlayerInfo}/>
         <PublicRoute {...props} restricted={false} exact path="/team" component={Team}/>

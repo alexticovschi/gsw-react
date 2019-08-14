@@ -54,8 +54,8 @@ class NbaTeam extends Component {
   displayPlayers = players =>
     players
       ? players.filter(player => player.strPosition !== "Manager").map((player, i) => (
-          <Link to={`/nba-team/${player.id}`}>
-            <Fade left delay={45*i} key={player.teamId}>
+          <Link to={`/nba-team/player/${player.idPlayer}`}>
+            <Fade left delay={45*i} key={player.idPlayer}>
               <div className="wrapper">
                 <div className="nba-player">
                   <div className="card-box-left">
