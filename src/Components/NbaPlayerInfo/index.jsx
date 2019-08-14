@@ -38,12 +38,12 @@ class NbaPlayerInfo extends Component {
           </Fade>
           <div className="nba-player-info">
             <h3 className="nba-player-fullname">{playerData.strPlayer}</h3>
+            <p className="nba-player-paragraph-1"><span>Nationality</span>: {playerData.strNationality}</p>
             <p className="nba-player-paragraph-1"><span>From</span>: {playerData.strBirthLocation}</p>
             <p className="nba-player-paragraph-1"><span>Born</span>: {playerData.dateBorn}</p>
             <p className="nba-player-paragraph-1"><span>Position</span>: {playerData.strPosition}</p>
             <p className="nba-player-paragraph-1"><span>Current Team</span>: {playerData.strTeam}</p>
             <p className="nba-player-paragraph-1"><span>Height</span>: {playerData.strHeight}</p>
-            <p className="nba-player-paragraph-1"><span>Nationality</span>: {playerData.strNationality}</p>
             <p className="nba-player-paragraph-1"><span>Height</span>: {playerData.strHeight}</p>
             <p className="nba-player-paragraph-1"><span>Weight</span>: {playerData.strWeight}</p>
             <p className="nba-player-paragraph-2">
