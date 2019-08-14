@@ -44,7 +44,6 @@ class NbaPlayerInfo extends Component {
             <p className="nba-player-paragraph-1"><span>Position</span>: {playerData.strPosition}</p>
             <p className="nba-player-paragraph-1"><span>Current Team</span>: {playerData.strTeam}</p>
             <p className="nba-player-paragraph-1"><span>Height</span>: {playerData.strHeight}</p>
-            <p className="nba-player-paragraph-1"><span>Height</span>: {playerData.strHeight}</p>
             <p className="nba-player-paragraph-1"><span>Weight</span>: {playerData.strWeight}</p>
             <p className="nba-player-paragraph-2">
               {playerData.strDescriptionEN}
