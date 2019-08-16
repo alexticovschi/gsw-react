@@ -61,7 +61,7 @@ class NbaTeams extends Component {
 
     return (
       <div className="backgrnd">
-        <div className="nba-teams_container">
+        <div className="nba-teams-container">
           {this.state.isLoading ? (
             <div className="nba-teams-wrapper">
               <div className="nba-teams-progress">
