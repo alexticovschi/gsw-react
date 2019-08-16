@@ -1,13 +1,6 @@
 .nba-player-container {
-
-    margin-top: 84px;
+    margin-top: 82px;
     min-height: 80vh;
-
-    /* background: linear-gradient(-48deg,
-            rgb(255, 255, 255) 30%,
-            rgb(228, 242, 252) 40%,
-            rgb(176, 222, 255) 55%); */
-
     background: radial-gradient(circle,
             var(--color1) 40%,
             var(--color2),
@@ -41,8 +34,10 @@
 
 .nba-player-fullname {
     font-size: 2.1rem;
-    font-weight: 500;
-    margin-bottom: 0;
+    font-weight: 600;
+    padding-bottom: 10px;
+    font-family: 'octin';
+    letter-spacing: 4px;
 }
 
 .nba-player-paragraph-1 {
@@ -61,21 +56,26 @@
 }
 
 
-@media(max-width: 1400px) {
-    .nba-player-card:first-child {
-        margin-bottom: 3rem;
-    }
-}
-
-
-@media(max-width: 750px) {
+@media (max-width: 1400px) {
     .nba-player-container {
-        margin-top: 84px;
+        min-height: 82.3vh;
     }
 
     .nba-player-card {
         margin-top: 40px;
-        width: 24rem;
+        width: 94vw;
+    }
+}
+
+@media(max-width: 780px) {
+    .nba-player-container {
+        margin-top: 50px;
+        padding: 60px 0;
+    }
+
+    .nba-player-card {
+        margin-top: 40px;
+        width: 94vw;
         grid-template-columns: 1fr;
     }
 
@@ -87,20 +87,34 @@
 }
 
 @media(max-width: 500px) {
-    .nba-player-paragraph {
-        font-size: 1.2rem;
-        width: 80%;
+    .nba-player-info {
+        padding: 1rem;
+    }
+
+    .nba-player-paragraph-1,
+    .nba-player-paragraph-1 span {
+        font-size: 1rem;
+    }
+
+    .nba-player-paragraph-2 {
+        font-size: 1rem;
+        padding-top: 15px;
     }
 
     .nba-player-image {
         width: 300px;
+    }
+
+    .nba-player-fullname {
+        margin-top: -6px;
+        font-size: 23px;
     }
 }
 
 
 @media(max-width: 360px) {
     .nba-player-card {
-        width: 19rem;
+        /* width: 19rem; */
     }
 
     .nba-player-image {

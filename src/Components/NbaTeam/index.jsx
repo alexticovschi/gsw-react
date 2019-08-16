@@ -14,7 +14,8 @@ class NbaTeam extends Component {
   state = {
     isLoading: false,
     id: null,
-    players: []
+    teamName:  null,
+    players: [],
   };
 
   componentDidMount() {
@@ -30,7 +31,8 @@ class NbaTeam extends Component {
 
         this.setState({
           isLoading: false,
-          id: teamData.teamId
+          id: teamData.teamId,
+          teamName: teamData.name
         });
 
         if (this.state.id) {
@@ -79,11 +81,14 @@ class NbaTeam extends Component {
       : null;
 
   render() {
-    console.log(this.state);
     const players = this.state.players;
+    const teamName = this.state.teamName;
 
     return (
       <div className="backgrnd">
+        <Zoom>
+          <h1 className="team-name-title">{teamName}</h1>
+        </Zoom>
         <div className="nba-teams-container">
           {this.state.isLoading ? (
             <div className="nba-teams-wrapper">

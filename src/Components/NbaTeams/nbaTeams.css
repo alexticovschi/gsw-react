@@ -20,8 +20,7 @@
 .nba-teams-container {
     overflow-x: hidden;
     max-width: 1470px;
-    margin: 0 auto;
-    
+    margin: auto;
     min-height: 100vh;
 }
 
@@ -31,7 +30,7 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-column-gap: 78px;
     grid-row-gap: 50px;
-
+    
     padding: 150px 20px;
 }
 
@@ -51,10 +50,6 @@
     align-content: center;
     align-items: center;
     transition: all 0.4s;
-}
-
-.nba-team:hover {
-    box-shadow: 5px 8px 14px 8px rgba(7, 6, 6, 0.15);
 }
 
 .team-name {
@@ -83,7 +78,7 @@
 }
 
 @media (max-width: 320px) {
-    .nba_teams {
+    .nba-teams {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     }
 }

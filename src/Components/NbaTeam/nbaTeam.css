@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'octin';
+    src: url("../../Resources/font/octin.ttf");
+}
+
 .nba-team {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -7,6 +12,17 @@
     margin-top: 80px;
 
     padding: 100px 20px;
+}
+
+.team-name-title {
+    display: block;
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: -130px;
+    font-size: 40px;
+    color: #fff;
+    letter-spacing: 8px;
+    font-family: 'octin';
 }
 
 .nba-player {
@@ -70,5 +86,12 @@
 @media (max-width: 460px) {
     .nba-team {
         padding: 60px 20px;
+    }
+
+    .team-name-title {
+        font-size: 25px;
+        padding-top: 100px;
+        margin-bottom: -100px;
+        color: #fff;
     }
 }
