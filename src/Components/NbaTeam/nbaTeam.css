@@ -1,4 +1,4 @@
-.nba_team {
+.nba-team {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     grid-column-gap: 78px;
@@ -67,10 +67,8 @@
 }
 
 
-
 @media (max-width: 460px) {
-    .nba_team {
-        margin-top: 60px;
+    .nba-team {
+        padding: 60px 20px;
     }
-
 }

@@ -39,7 +39,7 @@ class NbaTeams extends Component {
             <Fade right delay={20 * i} key={team.teamId}>
               <div className="wrapper">
                 <div className="game_block">
-                  <div className="nba-team">
+                  <div className="nba-team-box">
                     <div className="team-name">{team.name}</div>
 
                     <Zoom delay={500}>
@@ -60,16 +60,16 @@ class NbaTeams extends Component {
     const teams = this.state.teams;
 
     return (
-      <div className="back_grnd">
-        <div className="nba_teams_container">
+      <div className="backgrnd">
+        <div className="nba-teams_container">
           {this.state.isLoading ? (
-            <div className="nba_teams_wrapper">
-              <div className="nba_teams_progress">
+            <div className="nba-teams-wrapper">
+              <div className="nba-teams-progress">
                 <CircularProgress style={{ color: "#fff" }} />
               </div>
             </div>
           ) : (
-            <div className="nba_teams">{this.displayTeams(teams)}</div>
+            <div className="nba-teams">{this.displayTeams(teams)}</div>
           )}
         </div>
       </div>

@@ -5,9 +5,8 @@ import { Link } from "react-router-dom";
 
 import { firebaseDB } from "../../firebase";
 
-import Fade from 'react-reveal/Fade';
-import Zoom from 'react-reveal/Zoom';
-
+import Fade from "react-reveal/Fade";
+import Zoom from "react-reveal/Zoom";
 
 import "./nbaTeam.css";
 
@@ -53,23 +52,30 @@ class NbaTeam extends Component {
 
   displayPlayers = players =>
     players
-      ? players.filter(player => player.strPosition !== "Manager").map((player, i) => (
-          <Link to={`/nba-team/player/${player.idPlayer}`}>
-            <Fade left delay={45*i} key={player.idPlayer}>
-              <div className="wrapper">
-                <div className="nba-player">
-                  <div className="card-box-left">
-                    <div className="nba-player-name">{player.strPlayer}</div>
-                    <div className="nba-player-position">{player.strPosition}</div>
+      ? players
+          .filter(player => player.strPosition !== "Manager")
+          .map((player, i) => (
+            <Link to={`/nba-team/player/${player.idPlayer}`}>
+              <Fade left delay={45 * i} key={player.idPlayer}>
+                <div className="wrapper">
+                  <div className="nba-player">
+                    <div className="card-box-left">
+                      <div className="nba-player-name">{player.strPlayer}</div>
+                      <div className="nba-player-position">
+                        {player.strPosition}
+                      </div>
+                    </div>
+                    <Zoom delay={500}>
+                      <img
+                        className="nba-player-logo"
+                        src={`${player.strCutout}`}
+                      />
+                    </Zoom>
                   </div>
-                  <Zoom delay={500}>
-                    <img className="nba-player-logo" src={`${player.strCutout}`} />
-                  </Zoom>
                 </div>
-              </div>
-            </Fade>
-          </Link>
-        ))
+              </Fade>
+            </Link>
+          ))
       : null;
 
   render() {
@@ -77,16 +83,18 @@ class NbaTeam extends Component {
     const players = this.state.players;
 
     return (
-      <div className="back_grnd">
-        <div className="nba_teams_container">
+      <div className="backgrnd">
+        <div className="nba-teams-container">
           {this.state.isLoading ? (
-            <div className="nba_teams_wrapper">
-              <div className="nba_teams_progress">
+            <div className="nba-teams-wrapper">
+              <div className="nba-teams-progress">
                 <CircularProgress style={{ color: "#fff" }} />
               </div>
             </div>
           ) : (
-            <div className="nba_team">{this.displayPlayers(players)}</div>
+            <div className="nba-team">
+              {this.displayPlayers(players)}
+            </div>
           )}
         </div>
       </div>

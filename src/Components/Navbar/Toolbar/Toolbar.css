@@ -6,7 +6,7 @@
     background: #FDB927;
     height: 82px;
     padding: 0 20px;
-    z-index: 100000000;
+    z-index: 1000;
     border-bottom: 2px solid #26282A;
 }
 
