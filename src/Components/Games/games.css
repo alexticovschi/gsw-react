@@ -71,6 +71,12 @@
     }
 }
 
+@media (max-width: 770px) {
+    .games_container {
+        margin-top: 76px;
+    }
+}
+
 @media (max-width: 475px) {
     .game_filters .option {
         width: 100%;

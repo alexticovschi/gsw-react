@@ -36,6 +36,9 @@
 }
 
 @media screen and (max-width: 700px) {
+    .team_container {
+        margin-top: 77px;
+    }
     .team_category_wrapper .title {
         font-size: 36px;
     }
