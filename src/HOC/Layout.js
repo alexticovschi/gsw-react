@@ -1,11 +1,11 @@
 import React from 'react';
-import Header from '../Components/Header';
+import Navbar from '../Components/Navbar/Navbar';
 import Footer from '../Components/Footer';
 
 const Layout = (props) => {
     return (
         <div> 
-            <Header user={props.user}/>
+            <Navbar user={props.user}/>
                 {props.children}
             <Footer/>
         </div>
