@@ -20,16 +20,22 @@
     grid-template-columns: 1fr 1.5fr;
     grid-template-rows: 1fr;
     justify-items: center;
-    align-items: center;
+    align-items: start;
+
+    margin: 80px 0;
 }
 
 
 .nba-player-image {
     width: 440px;
+    margin-top: -20px;
+
+    border-radius: 6px;
 }
 
 .nba-player-info {
-    padding: 2rem;
+    padding: 1rem 3rem 1rem 1rem;
+    width: 100%;
 }
 
 .nba-player-fullname {
@@ -48,11 +54,36 @@
 .nba-player-paragraph-1 span {
     font-size: 1.1rem;
     font-weight: 600;
-    color: #363636;
+    color: #525151;
+}
+
+.show-more-anchor {
+    color: #fdb927;
+    transition: all .4s;
+}
+
+.show-more-anchor:hover {
+    color: #e7a005;
+}
+
+.nba-player-info .react-reveal {
+    margin-top: 0rem;
+    padding: 0 1rem 1rem 0;
+    width: 100%;
 }
 
 .nba-player-paragraph-2 {
-    font-size: 1.1rem;
+    font-size: 1.1rem !important;
+    line-height: 1.6rem;
+    display: inline-block;
+    width: 100%;
+}
+
+.react-reveal span {
+    font-size: 1.1rem !important;
+    line-height: 1.6rem;
+    display: inline-block;
+    width: 100%;
 }
 
 
@@ -64,6 +95,14 @@
     .nba-player-card {
         margin-top: 40px;
         width: 94vw;
+    }
+
+    .nba-player-info .react-reveal {
+        padding: 0rem;
+    }
+
+    .nba-player-info {
+        padding: 2rem;
     }
 }
 
@@ -84,6 +123,10 @@
         border-radius: 10px;
         margin-top: -20px;
     }
+
+    .nba-player-info {
+        padding: 1rem;
+    }
 }
 
 @media(max-width: 500px) {
@@ -99,6 +142,11 @@
     .nba-player-paragraph-2 {
         font-size: 1rem;
         padding-top: 15px;
+        line-height: 1.5rem;
+    }
+
+    .react-reveal span {
+        font-size: 1rem;
     }
 
     .nba-player-image {
@@ -113,10 +161,6 @@
 
 
 @media(max-width: 360px) {
-    .nba-player-card {
-        /* width: 19rem; */
-    }
-
     .nba-player-image {
         width: 260px;
     }
