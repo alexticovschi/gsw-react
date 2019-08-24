@@ -8,13 +8,13 @@ const GameBlock = ({ game }) => {
             <div className="scoreboard"> 
                 <div className="date">{game.date}</div>
                 <div className="team">
-                    <img className="logo" src={`images/team_icons/${game.localThmb}.svg`}></img>
+                    <img className="logo" src={`images/team_icons/${game.localThmb}.svg`} alt="team logo"/>
                     <div className="name">{game.local}</div>
                     <div className={game.result === 'W' ? `score win` : 'score'}>{game.resultLocal}</div>
                 </div>
                 <div className="divider"></div>
                 <div className="team">
-                    <img className="logo" src={`images/team_icons/${game.awayThmb}.svg`}></img>
+                    <img className="logo" src={`images/team_icons/${game.awayThmb}.svg`} alt="team logo"/>
                     <div className="name">{game.away}</div>
                     <div className={game.result === 'L' ? `score lose` : 'score'}>{game.resultAway}</div>
                 </div>

@@ -275,7 +275,6 @@ class AddEditGame extends Component {
 
 
     render() {
-        console.log(this.state)
         return (
             <AdminLayout>
                 <h2>{this.state.formType}</h2>

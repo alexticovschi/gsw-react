@@ -47,7 +47,6 @@ class NbaTeam extends Component {
     );
 
     const players = await resp.json();
-    console.log(players);
 
     this.setState({ players: players.player });
   };
@@ -57,8 +56,8 @@ class NbaTeam extends Component {
       ? players
           .filter(player => player.strPosition !== "Manager")
           .map((player, i) => (
-            <Link to={`/nba-team/player/${player.idPlayer}`}>
-              <Fade left delay={45 * i} key={player.idPlayer}>
+            <Link to={`/nba-team/player/${player.idPlayer}`} key={player.idPlayer}>
+              <Fade left delay={45 * i}>
                 <div className="wrapper">
                   <div className="nba-player">
                     <div className="card-box-left">
@@ -71,6 +70,7 @@ class NbaTeam extends Component {
                       <img
                         className="nba-player-logo"
                         src={`${player.strCutout}`}
+                        alt="nba player logo"
                       />
                     </Zoom>
                   </div>

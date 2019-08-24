@@ -27,14 +27,13 @@ class NbaPlayerInfo extends Component {
 
   render() {
     const { playerData } = this.state;
-    console.log(playerData);
 
     return (
       <section className="nba-player-container">
         <div className="nba-player-card">
           <Fade delay={400}>
             <div className="nba-player-image-wrapper">
-              <img src={playerData.strThumb} className="nba-player-image" />
+              <img src={playerData.strThumb} className="nba-player-image" alt="nba player"/>
             </div>
           </Fade>
           <div className="nba-player-info">

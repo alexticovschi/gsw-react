@@ -23,8 +23,6 @@ class NbaTeams extends Component {
     firebaseTeams.once("value").then(data => {
       const teams = firebaseLooper(data);
 
-      console.log(teams);
-
       this.setState({
         teams,
         isLoading: false
@@ -35,8 +33,8 @@ class NbaTeams extends Component {
   displayTeams = teams =>
     teams
       ? teams.map((team, i) => (
-          <Link to={`/nba-team/${team.id}`}>
-            <Fade right delay={20 * i} key={team.teamId}>
+          <Link to={`/nba-team/${team.id}`} key={team.teamId}>
+            <Fade right delay={20 * i}>
               <div className="wrapper">
                 <div className="game_block">
                   <div className="nba-team-box">
@@ -46,6 +44,7 @@ class NbaTeams extends Component {
                       <img
                         className="team-logo"
                         src={`images/team_icons/${team.thmb}.svg`}
+                        alt="team logo"
                       />
                     </Zoom>
                   </div>

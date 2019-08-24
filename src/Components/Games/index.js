@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import CircularProgress from '@material-ui/core/CircularProgress';
 
 import { firebaseGames } from '../../firebase';
 import { firebaseLooper, reverseArray } from '../../miscellaneous';
@@ -57,7 +56,6 @@ class Games extends Component {
 
     render() {
         const state = this.state;
-        console.log(state.resultFilter)
         return (
             <div className="games_container">
                 <div className="games_wrapper">

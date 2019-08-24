@@ -138,12 +138,10 @@ class AddEditPlayers extends Component {
     updateFields = (playerData, playerId, type, url) => {
         const newFormData = {...this.state.formData};
 
-        console.log('playerData:',playerData)
 
         for(let key in newFormData) {
             newFormData[key].value = playerData[key];
             newFormData[key].valid = true;
-            console.log(key, ':', playerData[key])
         }
 
         this.setState({

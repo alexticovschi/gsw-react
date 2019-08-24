@@ -71,7 +71,6 @@ class Team extends Component {
     )
 
     render() {
-        console.log(this.state.players)
         return (
             <div className="team_container">
                 {
