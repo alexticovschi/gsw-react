@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 import { firebaseDB, firebase } from '../../firebase';
+import Zoom from "react-reveal/Zoom";
+import Fade from "react-reveal/Fade";
 
 import './style.css';
 
@@ -55,10 +57,12 @@ class PlayerInfo extends Component {
                             <div class="card">
 
                                 <div class="card-thumb">
-                                    <div>
-                                        <img className="gsw_logo" src="/images/gsw_logo.png" alt=""/>
-                                        <img className="player_img" src={this.state.playerImgURL} />
-                                    </div>
+                                    <Fade delay={200}>
+                                        <div>
+                                            <img className="gsw_logo" src="/images/gsw_logo.png" alt=""/>
+                                            <img className="player_img" src={this.state.playerImgURL} />
+                                        </div>
+                                    </Fade>
                                 </div>
 
                                 <div class="card-content">
