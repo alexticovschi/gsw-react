@@ -111,33 +111,33 @@ class AddEditPlayers extends Component {
         } else {
             // edit player 
             this.setState({ isLoading: true });
-
-            firebaseDB.ref(`players/${playerId}`).once('value')
-                .then(data => {
-                    const playerData = data.val();
-
-                    firebase.storage().ref('players')
-                        .child(playerData.image)
-                        .getDownloadURL()
-                        .then(url => {
-                            this.updateFields(playerData, playerId, 'Edit Player', url)
-                        }).catch(error => {
-                            this.updateFields({ 
-                                    ...playerData,
-                                    image: ''
-                                }, 
-                                playerId, 'Edit Player')
-
-                        })
-
-                    this.setState({ isLoading: false });
-                })   
+            this.getPlayerData(playerId)
         }
+    }
+
+    getPlayerData = async(playerId) => {
+        const response = await firebaseDB.ref(`players/${playerId}`).once('value');
+        const playerData = response.val();
+        
+        firebase.storage()
+                .ref('players')
+                .child(playerData.image)
+                .getDownloadURL()
+                .then(url => {
+                    this.updateFields(playerData, playerId, 'Edit Player', url)
+                }).catch(error => {
+                    this.updateFields({ 
+                        ...playerData,
+                        image: ''
+                    }, 
+                    playerId, 'Edit Player')
+                })
+
+        this.setState({ isLoading: false });
     }
 
     updateFields = (playerData, playerId, type, url) => {
         const newFormData = {...this.state.formData};
-
 
         for(let key in newFormData) {
             newFormData[key].value = playerData[key];
@@ -151,7 +151,6 @@ class AddEditPlayers extends Component {
             formData: newFormData
         })
     }
-
 
     updateForm(element, content='') {
         const newFormData = { ...this.state.formData };
@@ -231,7 +230,7 @@ class AddEditPlayers extends Component {
     }
 
     render() {
-        // console.log(this.state.formData)
+        console.log(this.state.formData)
         return (
             <AdminLayout>
                 <h2>{this.state.formType}</h2>

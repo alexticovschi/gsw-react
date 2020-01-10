@@ -119,6 +119,7 @@ button:hover {
 
 .error_label {
     color: #f44336;
+    font-size: 16px;
     font-weight: 600;
     margin: 10px 0px;
 }
