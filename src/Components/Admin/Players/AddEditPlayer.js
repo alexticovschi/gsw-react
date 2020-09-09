@@ -1,103 +1,103 @@
-import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
-import AdminLayout from '../../../HOC/AdminLayout';
+import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
+import AdminLayout from "../../../HOC/AdminLayout";
 
-import CircularProgress from '@material-ui/core/CircularProgress';
+import CircularProgress from "@material-ui/core/CircularProgress";
 
-import FormField from '../../UI/FormFields';
-import { validate } from '../../../miscellaneous';
-import FileUploader from '../../UI/FileUploader/FileUploader';
+import FormField from "../../UI/FormFields";
+import { validate } from "../../../miscellaneous";
+import FileUploader from "../../UI/FileUploader/FileUploader";
 
-import { firebasePlayers, firebaseDB, firebase } from '../../../firebase';
+import { firebasePlayers, firebaseDB, firebase } from "../../../firebase";
 
-import './AddEditPlayer.css';
+import "./AddEditPlayer.css";
 
 class AddEditPlayers extends Component {
   state = {
     isLoading: false,
-    playerId: '',
-    formType: '',
+    playerId: "",
+    formType: "",
     formError: false,
-    formSuccess: '',
-    defaultImg: '',
+    formSuccess: "",
+    defaultImg: "",
     players: [],
     formData: {
       firstname: {
-        element: 'input',
-        value: '',
+        element: "input",
+        value: "",
         config: {
-          label: 'Player First Name',
-          name: 'firstname_input',
-          type: 'text'
+          label: "Player First Name",
+          name: "firstname_input",
+          type: "text",
         },
         validation: {
-          required: true
+          required: true,
         },
         valid: false,
-        validationMessage: '',
-        showLabel: true
+        validationMessage: "",
+        showLabel: true,
       },
       lastname: {
-        element: 'input',
-        value: '',
+        element: "input",
+        value: "",
         config: {
-          label: 'Player Last Name',
-          name: 'lastname_input',
-          type: 'text'
+          label: "Player Last Name",
+          name: "lastname_input",
+          type: "text",
         },
         validation: {
-          required: true
+          required: true,
         },
         valid: false,
-        validationMessage: '',
-        showLabel: true
+        validationMessage: "",
+        showLabel: true,
       },
       number: {
-        element: 'input',
-        value: '',
+        element: "input",
+        value: "",
         config: {
-          label: 'Player Number',
-          name: 'number_input',
-          type: 'number'
+          label: "Player Number",
+          name: "number_input",
+          type: "number",
         },
         validation: {
-          required: true
+          required: true,
         },
         valid: false,
-        validationMessage: '',
-        showLabel: true
+        validationMessage: "",
+        showLabel: true,
       },
       position: {
-        element: 'select',
-        value: '',
+        element: "select",
+        value: "",
         config: {
-          label: 'Player Position',
-          name: 'select_position',
-          type: 'select',
+          label: "Player Position",
+          name: "select_position",
+          type: "select",
           options: [
-            { key: 'Center', value: 'Center' },
-            { key: 'Center-Forward', value: 'Center-Forward' },
-            { key: 'Forward', value: 'Forward' },
-            { key: 'Guard', value: 'Guard' },
-            { key: 'Guard-Forward', value: 'Guard-Forward' }
-          ]
+            { key: "Center", value: "Center" },
+            { key: "Center-Forward", value: "Center-Forward" },
+            { key: "Forward", value: "Forward" },
+            { key: "Guard", value: "Guard" },
+            { key: "Guard-Forward", value: "Guard-Forward" },
+          ],
         },
         validation: {
-          required: true
+          required: true,
         },
         valid: false,
-        validationMessage: '',
-        showLabel: true
+        validationMessage: "",
+        showLabel: true,
       },
       image: {
-        element: 'image',
-        value: '',
+        element: "image",
+        value: "",
         validation: {
-          required: true
+          required: true,
         },
-        valid: false
-      }
-    }
+        valid: false,
+      },
+    },
   };
 
   componentDidMount() {
@@ -106,7 +106,7 @@ class AddEditPlayers extends Component {
     if (!playerId) {
       // add player
       this.setState({
-        formType: 'Add Player'
+        formType: "Add Player",
       });
     } else {
       // edit player
@@ -115,26 +115,26 @@ class AddEditPlayers extends Component {
     }
   }
 
-  getPlayerData = async playerId => {
-    const response = await firebaseDB.ref(`players/${playerId}`).once('value');
+  getPlayerData = async (playerId) => {
+    const response = await firebaseDB.ref(`players/${playerId}`).once("value");
     const playerData = response.val();
 
     firebase
       .storage()
-      .ref('players')
+      .ref("players")
       .child(playerData.image)
       .getDownloadURL()
-      .then(url => {
-        this.updateFields(playerData, playerId, 'Edit Player', url);
+      .then((url) => {
+        this.updateFields(playerData, playerId, "Edit Player", url);
       })
-      .catch(error => {
+      .catch((error) => {
         this.updateFields(
           {
             ...playerData,
-            image: ''
+            image: "",
           },
           playerId,
-          'Edit Player'
+          "Edit Player"
         );
       });
 
@@ -153,15 +153,15 @@ class AddEditPlayers extends Component {
       playerId: playerId,
       formType: type,
       defaultImg: url,
-      formData: newFormData
+      formData: newFormData,
     });
   };
 
-  updateForm(element, content = '') {
+  updateForm(element, content = "") {
     const newFormData = { ...this.state.formData };
     const newElement = { ...newFormData[element.id] };
 
-    if (content === '') {
+    if (content === "") {
       newElement.value = element.event.target.value;
     } else {
       newElement.value = content;
@@ -175,14 +175,14 @@ class AddEditPlayers extends Component {
 
     this.setState({
       formError: false,
-      formData: newFormData
+      formData: newFormData,
     });
   }
 
-  successForm = message => {
+  successForm = (message) => {
     this.setState({ formSuccess: message });
 
-    setTimeout(() => this.setState({ formSuccess: '' }), 2000);
+    setTimeout(() => this.setState({ formSuccess: "" }), 2000);
   };
 
   submitForm(event) {
@@ -198,24 +198,24 @@ class AddEditPlayers extends Component {
 
     if (formIsValid) {
       // submit form
-      if (this.state.formType === 'Edit Player') {
+      if (this.state.formType === "Edit Player") {
         firebaseDB
           .ref(`players/${this.state.playerId}`)
           .update(dataToSubmit)
           .then(() => {
-            this.successForm('Update Completed');
+            this.successForm("Update Completed");
           })
-          .catch(error => this.setState({ formError: true }));
+          .catch((error) => this.setState({ formError: true }));
       } else {
         // add player to database
         firebasePlayers
           .push(dataToSubmit)
           .then(() => {
-            this.props.history.push('/admin_players');
+            this.props.history.push("/admin_players");
           })
-          .catch(error => {
+          .catch((error) => {
             this.setState({
-              formError: true
+              formError: true,
             });
           });
       }
@@ -226,21 +226,21 @@ class AddEditPlayers extends Component {
 
   resetImage = () => {
     const newFormData = { ...this.state.formData };
-    newFormData['image'].value = '';
-    newFormData['image'].valid = false;
+    newFormData["image"].value = "";
+    newFormData["image"].valid = false;
     this.setState({
-      defaultImg: '',
-      formData: newFormData
+      defaultImg: "",
+      formData: newFormData,
     });
   };
 
-  storeFilename = filename => {
-    this.updateForm({ id: 'image' }, filename);
+  storeFilename = (filename) => {
+    this.updateForm({ id: "image" }, filename);
   };
 
-  deletePlayer = async playerId => {
+  deletePlayer = async (playerId) => {
     await firebaseDB.ref(`players/${playerId}`).remove();
-    this.props.history.push('/admin_players');
+    this.props.history.push("/admin_players");
   };
 
   render() {
@@ -248,66 +248,68 @@ class AddEditPlayers extends Component {
       <AdminLayout>
         <h2>{this.state.formType}</h2>
 
-        <div className='editplayer_wrapper'>
-          <div className='editplayer_wrapper_inner'>
-            <form onSubmit={event => this.submitForm(event)}>
+        <div className="editplayer_wrapper">
+          <div className="editplayer_wrapper_inner">
+            <form onSubmit={(event) => this.submitForm(event)}>
               {this.state.isLoading ? (
-                <div className='admin_progress'>
-                  <CircularProgress style={{ color: '#FDB927' }} />
+                <div className="admin_progress">
+                  <CircularProgress style={{ color: "#FDB927" }} />
                 </div>
               ) : (
                 <FileUploader
-                  dir={'players'}
-                  tag={'Player Image'}
+                  dir={"players"}
+                  tag={"Player Image"}
                   defaultImg={this.state.defaultImg}
                   defaultImgName={this.state.formData.image.value}
                   resetImage={() => this.resetImage()}
-                  filename={filename => this.storeFilename(filename)}
+                  filename={(filename) => this.storeFilename(filename)}
                 />
               )}
 
               <FormField
-                id={'firstname'}
+                id={"firstname"}
                 formData={this.state.formData.firstname}
-                change={element => this.updateForm(element)}
+                change={(element) => this.updateForm(element)}
               />
 
               <FormField
-                id={'lastname'}
+                id={"lastname"}
                 formData={this.state.formData.lastname}
-                change={element => this.updateForm(element)}
+                change={(element) => this.updateForm(element)}
               />
 
               <FormField
-                id={'number'}
+                id={"number"}
                 formData={this.state.formData.number}
-                change={element => this.updateForm(element)}
+                change={(element) => this.updateForm(element)}
               />
 
               <FormField
-                id={'position'}
+                id={"position"}
                 formData={this.state.formData.position}
-                change={element => this.updateForm(element)}
+                change={(element) => this.updateForm(element)}
               />
 
-              <div className='success_label'>{this.state.formSuccess}</div>
+              <div className="success_label">{this.state.formSuccess}</div>
               {this.state.formError ? (
-                <div className='error_label'>Something went wrong</div>
+                <div className="error_label">Something went wrong</div>
               ) : null}
 
-              <div className='admin_submit'>
-                <button onClick={event => this.submitForm(event)}>
+              <div className="admin_submit">
+                <button onClick={(event) => this.submitForm(event)}>
                   {this.state.formType}
                 </button>
               </div>
             </form>
 
-            <button
-              className='delete_player'
-              onClick={() => this.deletePlayer(this.props.match.params.id)}
-            >
-              Delete Player
-            </button>
+            {this.state.formType === "Add Player" ? null : (
+              <button
+                className="delete_player"
+                onClick={() => this.deletePlayer(this.props.match.params.id)}
+              >
+                Delete Player
+              </button>
+            )}
           </div>
         </div>
       </AdminLayout>
